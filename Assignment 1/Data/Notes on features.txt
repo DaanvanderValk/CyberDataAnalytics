@@ -1,0 +1,57 @@
+Data description
+
+- issuercountrycode: country where the card was issued
+  * relate with shoppercountrycode: match or mismatch?
+
+- txvariantcode: the card type that was used (subbrand of visa or master card)
+  * a single card (card_id) should always have the same type (txvariantcode)?
+
+- bin: card issuer identifier
+  * look into: does an issuer always issue the same kinds of card?
+  * look into: is every issuer in only one country?
+  
+- amount: in minor units (so 100 EUR = 100 euro cent)
+  * relate with createddate
+  * compare with average amount for a specific client for a month
+  * relate with currencycode
+  * compare with the amount for a specific day (for all clients)
+  * compare with the shoppercountrycode
+    
+- currencycode: transaction amount in minor units (so 100 EUR = 100 euro cent)
+  * relate with issuercountrycode / shoppercountrycode
+  
+- shoppercountrycode: IP address country
+  * relate with previous shoppercountrycodes from same client
+  
+- shopperinteraction: Ecommerce if it was an online transaction, ContAuth if it was a (monthly) subscription
+  * relate with previous and future expenses of the client (same amount/accountcode/other features in another month)
+  
+- simple_journal: Payment status. Authorised = “transaction approved and no fraud reported”, Refused = “transaction was declined, can be fraud, but can also be insufficient funds, etc”, Chargeback = “transaction was approved, but turned out to be fraud”
+  ==> Control
+  
+- bookingdate: only relevant for Chargebacks. Time stamp when the chargeback was reported. During simulation you may only use this knowledge after this date. So for example if on an email address a transaction ended in a chargeback, you can only block that email address after the booking date of the chargeback.
+  * Ignore
+  
+- cardverificationresponsesupplied: did the shopper provide his 3 digit CVC/CVV2 code?
+  * relate with cvcresponsecode
+  * relate with merchant (accountcode)
+  
+- cvcresponsecode: Validation result of the CVC/CVV2 code: 0 = Unknown, 1=Match, 2=No Match, 3-6=Not checked
+  
+- creationdate: Date of transaction
+  * count the number of transactions for a client in one month (also compared to average of all clients in that period)
+  * look at time of day
+  * look at the day of the week
+  
+- accountcode: merchant’s webshop
+  * relate with clients (card_id)
+  
+- mail_id: Email address
+  * relate with other client features (ip_id, card_id)
+  
+- ip_id: Ip address
+  * relate with other client features (mail_id, card_id)
+
+- card_id: Card number
+  * compare with currencycode
+  * compare with distinct accountcodes: do they buy at different merchants? 
