@@ -255,14 +255,14 @@ usy = y_array
 
 x_train, x_test, y_train, y_test = train_test_split(usx, usy, test_size = 0.2, random_state=42)#test_size: proportion of train/test data
 #apply random forest classifier with default parameters 
-print ("Random Forest Classifier")
+print("Random Forest Classifier")
 clf = RandomForestClassifier()
 clf.fit(x_train, y_train)
-y_pred_nosmote_randomforest = clf.predict(x_test)
+y_pred_nosmote_randomforest = clf.predict_proba(x_test)[:,1]
 
 print("Random Forest performance without smote")
-print("recall score:", recall_score(y_test, y_pred_nosmote_randomforest))
-print("accuracy score:", accuracy_score(y_test, y_pred_nosmote_randomforest))
+#print("recall score:", recall_score(y_test, y_pred_nosmote_randomforest))
+#print("accuracy score:", accuracy_score(y_test, y_pred_nosmote_randomforest))
 
 #Apply SMOTE 
 sm = SMOTE(random_state=12, ratio = 1.0) 
@@ -270,27 +270,29 @@ x_train_smote = x_train.astype(float)
 y_train_smote = y_train.astype(float)
 x_train_res, y_train_res = sm.fit_sample(x_train_smote, y_train_smote) 
 clf.fit(x_train_res, y_train_res)
-y_pred_smote_randomforest = clf.predict(x_test)
+y_pred_smote_randomforest = clf.predict_proba(x_test)[:,1]
 print("Random Forest performance after applying smote")
-print("recall score:", recall_score(y_test, y_pred_smote_randomforest))
-print("accuracy score:", accuracy_score(y_test, y_pred_smote_randomforest))
+#print("recall score:", recall_score(y_test, y_pred_smote_randomforest[:,1]))
+#print("accuracy score:", accuracy_score(y_test, y_pred_smote_randomforest[:,1]))
 
+#unique, counts = np.unique(y_pred_smote_randomforest, return_counts=True)
+#print("Dict:", dict(zip(unique, counts)))
 
 print("Logistic regression")
 print("Logistic regression performance without smote")
 logreg = LogisticRegression()
 logreg.fit(x_train, y_train)
 x_test_logreg = x_test.astype(float)
-y_pred_nosmote_logisticregression = logreg.predict(x_test_logreg)
+y_pred_nosmote_logisticregression = logreg.predict_proba(x_test_logreg)[:,1]
 
-print("recall score:", recall_score(y_test, y_pred_nosmote_logisticregression))
-print("accuracy score:", accuracy_score(y_test, y_pred_nosmote_logisticregression))
+#print("recall score:", recall_score(y_test, y_pred_nosmote_logisticregression))
+#print("accuracy score:", accuracy_score(y_test, y_pred_nosmote_logisticregression))
 
 print("Logistic regression performance after applying smote")
 logreg.fit(x_train_res, y_train_res)
-y_pred_smote_logisticregression = logreg.predict(x_test_logreg)
-print("recall score:", recall_score(y_test, y_pred_smote_logisticregression))
-print("accuracy score:", accuracy_score(y_test, y_pred_smote_logisticregression))
+y_pred_smote_logisticregression = logreg.predict_proba(x_test_logreg)[:,1]
+#print("recall score:", recall_score(y_test, y_pred_smote_logisticregression))
+#print("accuracy score:", accuracy_score(y_test, y_pred_smote_logisticregression))
 
 
 
@@ -299,15 +301,15 @@ print ("KNN algorithm")
 print("KNN performance without smote")
 clf = neighbors.KNeighborsClassifier(algorithm = 'kd_tree')
 clf.fit(x_train, y_train)
-y_pred_nosmote_knn = clf.predict(x_test)
-print("recall score:", recall_score(y_test, y_pred_nosmote_knn))
-print("accuracy score:", accuracy_score(y_test, y_pred_nosmote_knn))
+y_pred_nosmote_knn = clf.predict_proba(x_test)[:,1]
+#print("recall score:", recall_score(y_test, y_pred_nosmote_knn))
+#print("accuracy score:", accuracy_score(y_test, y_pred_nosmote_knn))
 
 print("KNN performance after applying smote")
 clf.fit(x_train_res, y_train_res)
-y_pred_smote_knn = clf.predict(x_test)
-print("recall score:", recall_score(y_test, y_pred_smote_knn))
-print("accuracy score:", accuracy_score(y_test, y_pred_smote_knn))
+y_pred_smote_knn = clf.predict_proba(x_test)[:,1]
+#print("recall score:", recall_score(y_test, y_pred_smote_knn))
+#print("accuracy score:", accuracy_score(y_test, y_pred_smote_knn))
 
 
 
@@ -357,3 +359,15 @@ plt.ylabel('True Positive Rate')
 plt.title('Receiver operating characteristic example')
 plt.legend(loc="lower right")
 plt.show()
+
+
+print("PR curve")
+plt.subplots(figsize=(15, 10))
+precision, recall, _ = precision_recall_curve(y_test, y_pred_nosmote_randomforest)
+plt.step(recall, precision, color='b', alpha=0.2,
+         where='post')
+plt.xlabel('Recall')
+plt.ylabel('Precision')
+plt.ylim([0.0, 1.05])
+plt.xlim([0.0, 1.0])
+plt.title('Precision-Recall curve: AP={0:0.2f}')
