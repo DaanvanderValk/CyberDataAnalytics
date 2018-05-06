@@ -34,6 +34,7 @@ import time
 import matplotlib.pyplot as plt
 from sklearn import neighbors
 from sklearn.metrics import precision_recall_curve
+from sklearn.metrics import f1_score
 from sklearn.metrics import classification_report
 from sklearn.cross_validation import train_test_split
 from sklearn.metrics import confusion_matrix
@@ -259,24 +260,30 @@ print("Random Forest Classifier")
 clf = RandomForestClassifier()
 clf.fit(x_train, y_train)
 y_pred_nosmote_randomforest = clf.predict_proba(x_test)[:,1]
+y_pred_nosmote_randomforest_bin = np.around(y_pred_nosmote_randomforest)
 
 print("Random Forest performance without smote")
-#print("recall score:", recall_score(y_test, y_pred_nosmote_randomforest))
-#print("accuracy score:", accuracy_score(y_test, y_pred_nosmote_randomforest))
+print("recall score:", recall_score(y_test, y_pred_nosmote_randomforest_bin))
+print("accuracy score:", accuracy_score(y_test, y_pred_nosmote_randomforest_bin))
+print("f1 score:", f1_score(y_test, y_pred_nosmote_randomforest_bin))
 
 #Apply SMOTE 
 sm = SMOTE(random_state=12, ratio = 1.0) 
 x_train_smote = x_train.astype(float)
 y_train_smote = y_train.astype(float)
 x_train_res, y_train_res = sm.fit_sample(x_train_smote, y_train_smote) 
+
 clf.fit(x_train_res, y_train_res)
 y_pred_smote_randomforest = clf.predict_proba(x_test)[:,1]
+y_pred_smote_randomforest_bin = np.around(y_pred_smote_randomforest)
 print("Random Forest performance after applying smote")
-#print("recall score:", recall_score(y_test, y_pred_smote_randomforest[:,1]))
-#print("accuracy score:", accuracy_score(y_test, y_pred_smote_randomforest[:,1]))
+print("recall score:", recall_score(y_test, y_pred_smote_randomforest_bin))
+print("accuracy score:", accuracy_score(y_test, y_pred_smote_randomforest_bin))
+print("f1 score:", f1_score(y_test, y_pred_smote_randomforest_bin))
 
 #unique, counts = np.unique(y_pred_smote_randomforest, return_counts=True)
 #print("Dict:", dict(zip(unique, counts)))
+
 
 print("Logistic regression")
 print("Logistic regression performance without smote")
@@ -284,16 +291,18 @@ logreg = LogisticRegression()
 logreg.fit(x_train, y_train)
 x_test_logreg = x_test.astype(float)
 y_pred_nosmote_logisticregression = logreg.predict_proba(x_test_logreg)[:,1]
-
-#print("recall score:", recall_score(y_test, y_pred_nosmote_logisticregression))
-#print("accuracy score:", accuracy_score(y_test, y_pred_nosmote_logisticregression))
+y_pred_nosmote_logisticregression_bin = np.around(y_pred_nosmote_logisticregression)
+print("recall score:", recall_score(y_test, y_pred_nosmote_logisticregression_bin))
+print("accuracy score:", accuracy_score(y_test, y_pred_nosmote_logisticregression_bin))
+print("f1 score:", f1_score(y_test, y_pred_nosmote_logisticregression_bin))
 
 print("Logistic regression performance after applying smote")
 logreg.fit(x_train_res, y_train_res)
 y_pred_smote_logisticregression = logreg.predict_proba(x_test_logreg)[:,1]
-#print("recall score:", recall_score(y_test, y_pred_smote_logisticregression))
-#print("accuracy score:", accuracy_score(y_test, y_pred_smote_logisticregression))
-
+y_pred_smote_logisticregression_bin = np.around(y_pred_smote_logisticregression)
+print("recall score:", recall_score(y_test, y_pred_smote_logisticregression_bin))
+print("accuracy score:", accuracy_score(y_test, y_pred_smote_logisticregression_bin))
+print("f1 score:", f1_score(y_test, y_pred_smote_logisticregression_bin))
 
 
 
@@ -302,14 +311,18 @@ print("KNN performance without smote")
 clf = neighbors.KNeighborsClassifier(algorithm = 'kd_tree')
 clf.fit(x_train, y_train)
 y_pred_nosmote_knn = clf.predict_proba(x_test)[:,1]
-#print("recall score:", recall_score(y_test, y_pred_nosmote_knn))
-#print("accuracy score:", accuracy_score(y_test, y_pred_nosmote_knn))
+y_pred_nosmote_knn_bin = np.around(y_pred_nosmote_knn)
+print("recall score:", recall_score(y_test, y_pred_nosmote_knn_bin))
+print("accuracy score:", accuracy_score(y_test, y_pred_nosmote_knn_bin))
+print("f1 score:", f1_score(y_test, y_pred_nosmote_knn_bin))
 
 print("KNN performance after applying smote")
 clf.fit(x_train_res, y_train_res)
 y_pred_smote_knn = clf.predict_proba(x_test)[:,1]
-#print("recall score:", recall_score(y_test, y_pred_smote_knn))
-#print("accuracy score:", accuracy_score(y_test, y_pred_smote_knn))
+y_pred_smote_knn_bin = np.around(y_pred_smote_knn)
+print("recall score:", recall_score(y_test, y_pred_smote_knn_bin))
+print("accuracy score:", accuracy_score(y_test, y_pred_smote_knn_bin))
+print("f1 score:", f1_score(y_test, y_pred_smote_knn_bin))
 
 
 
@@ -340,17 +353,17 @@ roc_auc_smote_knn = auc(fpr_smote_knn, tpr_smote_knn)
 plt.subplots(figsize=(15, 10))
 lw = 1
 plt.plot([0, 1], [0, 1], color='gray', lw=lw, linestyle='--') # straight line through the middle
-plt.plot(fpr_nosmote_randomforest, tpr_nosmote_randomforest, color='darkorange',
+plt.plot(fpr_nosmote_randomforest, tpr_nosmote_randomforest, color='green',
          lw=lw, label='Random forest (area = %0.2f)' % roc_auc_nosmote_randomforest)
 plt.plot(fpr_smote_randomforest, tpr_smote_randomforest, color='darkgreen',
          lw=lw, label='Random forest (after SMOTE) (area = %0.2f)' % roc_auc_smote_randomforest)
-plt.plot(fpr_nosmote_logisticregression, tpr_nosmote_logisticregression, color='darkred',
+plt.plot(fpr_nosmote_logisticregression, tpr_nosmote_logisticregression, color='red',
          lw=lw, label='Logistic regression (area = %0.2f)' % roc_auc_nosmote_logisticregression)
-plt.plot(fpr_smote_logisticregression, tpr_smote_logisticregression, color='darkblue',
+plt.plot(fpr_smote_logisticregression, tpr_smote_logisticregression, color='darkred',
          lw=lw, label='Logistic regression (after SMOTE) (area = %0.2f)' % roc_auc_smote_logisticregression)
-plt.plot(fpr_nosmote_knn, tpr_nosmote_knn, color='darkmagenta',
+plt.plot(fpr_nosmote_knn, tpr_nosmote_knn, color='blue',
          lw=lw, label='KNN (area = %0.2f)' % roc_auc_nosmote_knn)
-plt.plot(fpr_smote_knn, tpr_smote_knn, color='darkturquoise',
+plt.plot(fpr_smote_knn, tpr_smote_knn, color='darkblue',
          lw=lw, label='KNN (after SMOTE) (area = %0.2f)' % roc_auc_smote_knn)
 plt.xlim([0.0, 1.0])
 plt.ylim([0.0, 1.05])
@@ -363,9 +376,20 @@ plt.show()
 
 print("PR curve")
 plt.subplots(figsize=(15, 10))
-precision, recall, _ = precision_recall_curve(y_test, y_pred_nosmote_randomforest)
-plt.step(recall, precision, color='b', alpha=0.2,
-         where='post')
+precision_nosmote_randomforest, recall_nosmote_randomforest, _ = precision_recall_curve(y_test, y_pred_nosmote_randomforest)
+precision_smote_randomforest, recall_smote_randomforest, _ = precision_recall_curve(y_test, y_pred_smote_randomforest)
+precision_nosmote_logisticregression, recall_nosmote_logisticregression, _ = precision_recall_curve(y_test, y_pred_nosmote_logisticregression)
+precision_smote_logisticregression, recall_smote_logisticregression, _ = precision_recall_curve(y_test, y_pred_smote_logisticregression)
+precision_nosmote_knn, recall_nosmote_knn, _ = precision_recall_curve(y_test, y_pred_nosmote_knn)
+precision_smote_knn, recall_smote_knn, _ = precision_recall_curve(y_test, y_pred_smote_knn)
+
+plt.step(recall_nosmote_randomforest, precision_nosmote_randomforest, color='green', where='post')
+plt.step(recall_smote_randomforest, precision_smote_randomforest, color='black', where='post')
+plt.step(recall_nosmote_logisticregression, precision_nosmote_logisticregression, color='red', where='post')
+plt.step(recall_smote_logisticregression, precision_smote_logisticregression, color='darkred', where='post')
+plt.step(recall_nosmote_knn, precision_nosmote_knn, color='blue', where='post')
+plt.step(recall_smote_knn, precision_smote_knn, color='darkblue', where='post')
+
 plt.xlabel('Recall')
 plt.ylabel('Precision')
 plt.ylim([0.0, 1.05])
