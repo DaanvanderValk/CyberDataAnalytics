@@ -258,84 +258,98 @@ x_train, x_test, y_train, y_test = train_test_split(usx, usy, test_size = 0.2, r
 print ("Random Forest Classifier")
 clf = RandomForestClassifier()
 clf.fit(x_train, y_train)
-#trained_model = random_forest_classifier(train_x, train_y)
-    #print ("Trained model :: ", trained_model)
-predictions = clf.predict(x_test)
+y_pred_nosmote_randomforest = clf.predict(x_test)
 
-for i in range(0, 5):
-    print ("Actual outcome :: {} and Predicted outcome :: {}".format(list(y_test)[i], predictions[i]))
+print("Random Forest performance without smote")
+print("recall score:", recall_score(y_test, y_pred_nosmote_randomforest))
+print("accuracy score:", accuracy_score(y_test, y_pred_nosmote_randomforest))
 
-#print ("Train Accuracy :: ", accuracy_score(x_train, clf.predict(x_train)))
-#print ("Test Accuracy  :: ", accuracy_score(y_test, predictions))
-print ("recall score")
-print (recall_score(y_test, predictions))
-print ("accuracy score")    
-print (accuracy_score(y_test, predictions))
-
-#apply SMOTE 
-print ("after SMOTEing")
+#Apply SMOTE 
 sm = SMOTE(random_state=12, ratio = 1.0) 
-x_train = x_train.astype(float)
-y_train = y_train.astype(float)
-x_train_res, y_train_res = sm.fit_sample(x_train, y_train) 
+x_train_smote = x_train.astype(float)
+y_train_smote = y_train.astype(float)
+x_train_res, y_train_res = sm.fit_sample(x_train_smote, y_train_smote) 
 clf.fit(x_train_res, y_train_res)
-pred = clf.predict(x_test)
-print ("recall score")
-print (recall_score(y_test, pred))
-print ("accuracy score")
-print (accuracy_score(y_test, pred))
+y_pred_smote_randomforest = clf.predict(x_test)
+print("Random Forest performance after applying smote")
+print("recall score:", recall_score(y_test, y_pred_smote_randomforest))
+print("accuracy score:", accuracy_score(y_test, y_pred_smote_randomforest))
 
 
-
-print("after logistic regression")
+print("Logistic regression")
+print("Logistic regression performance without smote")
 logreg = LogisticRegression()
 logreg.fit(x_train, y_train)
-x_test = x_test.astype(float)
-predictionsLogis = logreg.predict(x_test)
+x_test_logreg = x_test.astype(float)
+y_pred_nosmote_logisticregression = logreg.predict(x_test_logreg)
 
-print (recall_score(y_test, predictionsLogis))
-print ("accuracy score")    
-print (accuracy_score(y_test, predictionsLogis))
+print("recall score:", recall_score(y_test, y_pred_nosmote_logisticregression))
+print("accuracy score:", accuracy_score(y_test, y_pred_nosmote_logisticregression))
 
-print ("After applying SMOTE")
-x_train_res, y_train_res = sm.fit_sample(x_train, y_train) 
-
+print("Logistic regression performance after applying smote")
 logreg.fit(x_train_res, y_train_res)
-pred = logreg.predict(x_test)
-print ("recall score")
-print (recall_score(y_test, pred))
-print ("accuracy score")
-print (accuracy_score(y_test, pred))
+y_pred_smote_logisticregression = logreg.predict(x_test_logreg)
+print("recall score:", recall_score(y_test, y_pred_smote_logisticregression))
+print("accuracy score:", accuracy_score(y_test, y_pred_smote_logisticregression))
+
+
+
 
 print ("KNN algorithm")
+print("KNN performance without smote")
 clf = neighbors.KNeighborsClassifier(algorithm = 'kd_tree')
 clf.fit(x_train, y_train)
-y_predict = clf.predict(x_test)
+y_pred_nosmote_knn = clf.predict(x_test)
+print("recall score:", recall_score(y_test, y_pred_nosmote_knn))
+print("accuracy score:", accuracy_score(y_test, y_pred_nosmote_knn))
 
-print (recall_score(y_test, y_predict))
-print ("accuracy score")    
-print (accuracy_score(y_test, y_predict))
-
-
-print ("After applying SMOTE")
-x_train_res, y_train_res = sm.fit_sample(x_train, y_train) 
-
+print("KNN performance after applying smote")
 clf.fit(x_train_res, y_train_res)
-pred = clf.predict(x_test)
-print ("recall score")
-print (recall_score(y_test, pred))
-print ("accuracy score")
-print (accuracy_score(y_test, pred))
+y_pred_smote_knn = clf.predict(x_test)
+print("recall score:", recall_score(y_test, y_pred_smote_knn))
+print("accuracy score:", accuracy_score(y_test, y_pred_smote_knn))
+
+
 
 print("ROC curve")
-pred_proba = clf.predict_proba(x_test)[:, 1]
-fpr, tpr, _ = roc_curve(y_test[:, 1], pred_proba)
+# Compute ROC data for all different classiers
+# Random forest without smote
+fpr_nosmote_randomforest, tpr_nosmote_randomforest, _ = roc_curve(y_test, y_pred_nosmote_randomforest)
+roc_auc_nosmote_randomforest = auc(fpr_nosmote_randomforest, tpr_nosmote_randomforest)
+# Random forest with smote
+fpr_smote_randomforest, tpr_smote_randomforest, _ = roc_curve(y_test, y_pred_smote_randomforest)
+roc_auc_smote_randomforest = auc(fpr_smote_randomforest, tpr_smote_randomforest)
 
-plt.figure()
+# Logistic regression without smote
+fpr_nosmote_logisticregression, tpr_nosmote_logisticregression, _ = roc_curve(y_test, y_pred_nosmote_logisticregression)
+roc_auc_nosmote_logisticregression = auc(fpr_nosmote_logisticregression, tpr_nosmote_logisticregression)
+# Logistic regression with smote
+fpr_smote_logisticregression, tpr_smote_logisticregression, _ = roc_curve(y_test, y_pred_smote_logisticregression)
+roc_auc_smote_logisticregression = auc(fpr_smote_logisticregression, tpr_smote_logisticregression)
+
+# KNN without smoke
+fpr_nosmote_knn, tpr_nosmote_knn, _ = roc_curve(y_test, y_pred_nosmote_knn)
+roc_auc_nosmote_knn = auc(fpr_nosmote_knn, tpr_nosmote_knn)
+# KNN with smoke
+fpr_smote_knn, tpr_smote_knn, _ = roc_curve(y_test, y_pred_smote_knn)
+roc_auc_smote_knn = auc(fpr_smote_knn, tpr_smote_knn)
+
+
+plt.subplots(figsize=(15, 10))
 lw = 1
-#plt.plot(fpr[2], tpr[2], color='darkorange',
-#         lw=lw, label='ROC curve (area = %0.2f)' % roc_auc[2])
-plt.plot([0, 1], [0, 1], color='navy', lw=lw, linestyle='--')
+plt.plot([0, 1], [0, 1], color='gray', lw=lw, linestyle='--') # straight line through the middle
+plt.plot(fpr_nosmote_randomforest, tpr_nosmote_randomforest, color='darkorange',
+         lw=lw, label='Random forest (area = %0.2f)' % roc_auc_nosmote_randomforest)
+plt.plot(fpr_smote_randomforest, tpr_smote_randomforest, color='darkgreen',
+         lw=lw, label='Random forest (after SMOTE) (area = %0.2f)' % roc_auc_smote_randomforest)
+plt.plot(fpr_nosmote_logisticregression, tpr_nosmote_logisticregression, color='darkred',
+         lw=lw, label='Logistic regression (area = %0.2f)' % roc_auc_nosmote_logisticregression)
+plt.plot(fpr_smote_logisticregression, tpr_smote_logisticregression, color='darkblue',
+         lw=lw, label='Logistic regression (after SMOTE) (area = %0.2f)' % roc_auc_smote_logisticregression)
+plt.plot(fpr_nosmote_knn, tpr_nosmote_knn, color='darkmagenta',
+         lw=lw, label='KNN (area = %0.2f)' % roc_auc_nosmote_knn)
+plt.plot(fpr_smote_knn, tpr_smote_knn, color='darkturquoise',
+         lw=lw, label='KNN (after SMOTE) (area = %0.2f)' % roc_auc_smote_knn)
 plt.xlim([0.0, 1.0])
 plt.ylim([0.0, 1.05])
 plt.xlabel('False Positive Rate')
