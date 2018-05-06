@@ -44,6 +44,8 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import recall_score
 from imblearn.over_sampling import SMOTE 
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import roc_curve, auc
 
 def string_to_timestamp(date_string):#convert time string to float value
     time_stamp = time.strptime(date_string, '%Y-%m-%d %H:%M:%S')
@@ -253,6 +255,7 @@ usy = y_array
 
 x_train, x_test, y_train, y_test = train_test_split(usx, usy, test_size = 0.2, random_state=42)#test_size: proportion of train/test data
 #apply random forest classifier with default parameters 
+print ("Random Forest Classifier")
 clf = RandomForestClassifier()
 clf.fit(x_train, y_train)
 #trained_model = random_forest_classifier(train_x, train_y)
@@ -264,18 +267,79 @@ for i in range(0, 5):
 
 #print ("Train Accuracy :: ", accuracy_score(x_train, clf.predict(x_train)))
 #print ("Test Accuracy  :: ", accuracy_score(y_test, predictions))
-
+print ("recall score")
 print (recall_score(y_test, predictions))
 print ("accuracy score")    
 print (accuracy_score(y_test, predictions))
-'''
+
 #apply SMOTE 
 print ("after SMOTEing")
 sm = SMOTE(random_state=12, ratio = 1.0) 
+x_train = x_train.astype(float)
+y_train = y_train.astype(float)
 x_train_res, y_train_res = sm.fit_sample(x_train, y_train) 
 clf.fit(x_train_res, y_train_res)
 pred = clf.predict(x_test)
-print (recall_score(y_test, predictions))
+print ("recall score")
+print (recall_score(y_test, pred))
 print ("accuracy score")
-print (accuracy_score(y_test, predictions))
-'''
+print (accuracy_score(y_test, pred))
+
+
+
+print("after logistic regression")
+logreg = LogisticRegression()
+logreg.fit(x_train, y_train)
+x_test = x_test.astype(float)
+predictionsLogis = logreg.predict(x_test)
+
+print (recall_score(y_test, predictionsLogis))
+print ("accuracy score")    
+print (accuracy_score(y_test, predictionsLogis))
+
+print ("After applying SMOTE")
+x_train_res, y_train_res = sm.fit_sample(x_train, y_train) 
+
+logreg.fit(x_train_res, y_train_res)
+pred = logreg.predict(x_test)
+print ("recall score")
+print (recall_score(y_test, pred))
+print ("accuracy score")
+print (accuracy_score(y_test, pred))
+
+print ("KNN algorithm")
+clf = neighbors.KNeighborsClassifier(algorithm = 'kd_tree')
+clf.fit(x_train, y_train)
+y_predict = clf.predict(x_test)
+
+print (recall_score(y_test, y_predict))
+print ("accuracy score")    
+print (accuracy_score(y_test, y_predict))
+
+
+print ("After applying SMOTE")
+x_train_res, y_train_res = sm.fit_sample(x_train, y_train) 
+
+clf.fit(x_train_res, y_train_res)
+pred = clf.predict(x_test)
+print ("recall score")
+print (recall_score(y_test, pred))
+print ("accuracy score")
+print (accuracy_score(y_test, pred))
+
+print("ROC curve")
+pred_proba = clf.predict_proba(x_test)[:, 1]
+fpr, tpr, _ = roc_curve(y_test[:, 1], pred_proba)
+
+plt.figure()
+lw = 1
+#plt.plot(fpr[2], tpr[2], color='darkorange',
+#         lw=lw, label='ROC curve (area = %0.2f)' % roc_auc[2])
+plt.plot([0, 1], [0, 1], color='navy', lw=lw, linestyle='--')
+plt.xlim([0.0, 1.0])
+plt.ylim([0.0, 1.05])
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+plt.title('Receiver operating characteristic example')
+plt.legend(loc="lower right")
+plt.show()
