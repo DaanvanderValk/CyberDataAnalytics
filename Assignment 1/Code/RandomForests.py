@@ -268,7 +268,7 @@ print("accuracy score:", accuracy_score(y_test, y_pred_nosmote_randomforest_bin)
 print("f1 score:", f1_score(y_test, y_pred_nosmote_randomforest_bin))
 
 #Apply SMOTE 
-sm = SMOTE(random_state=12, ratio = 1.0) 
+sm = SMOTE(random_state=12, ratio = 1.0)
 x_train_smote = x_train.astype(float)
 y_train_smote = y_train.astype(float)
 x_train_res, y_train_res = sm.fit_sample(x_train_smote, y_train_smote) 
@@ -389,6 +389,8 @@ plt.step(recall_nosmote_logisticregression, precision_nosmote_logisticregression
 plt.step(recall_smote_logisticregression, precision_smote_logisticregression, color='darkred', where='post')
 plt.step(recall_nosmote_knn, precision_nosmote_knn, color='blue', where='post')
 plt.step(recall_smote_knn, precision_smote_knn, color='darkblue', where='post')
+
+plt.plot([0.5, 0.5], color='gray', lw=lw, linestyle='--') # straight line through the middle
 
 plt.xlabel('Recall')
 plt.ylabel('Precision')
