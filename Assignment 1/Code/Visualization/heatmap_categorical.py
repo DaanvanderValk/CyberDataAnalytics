@@ -11,9 +11,7 @@ import numpy as np
 import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
-import sys
-
-from imblearn.over_sampling import SMOTE
+import datetime
 
 def string_to_timestamp(date_string): #convert time string to float value
     time_stamp = time.strptime(date_string, '%Y-%m-%d %H:%M:%S')
@@ -23,19 +21,30 @@ if __name__ == "__main__":
     # SETTINGS
     
     # Dimensions of the heatmaps; useful for tweaking.
-    x_size = 18
-    y_size = 3
+    x_size = 8
+    y_size = 2
     
     # Select the features to be plotted here
     # The features should be categorical, as their unique values are used
     feature1 = 'currencycode'
-    feature2 = 'shoppercountrycode'
+    feature2 = 'txvariantcode'
+    
+    # Save the heatmaps to SVG files?
+    saveToFiles = False
+    
+    # txtvariantcode vs currencycode
+    
+    # Kerneldistributionfunction.py
+    # ScatterPlot.py
 
 #    print(df.keys())             # These are the features:
 #       'txid', 'bookingdate', 'issuercountrycode', 'txvariantcode', 'bin',
 #       'amount', 'currencycode', 'shoppercountrycode', 'shopperinteraction',
 #       'simple_journal', 'cardverificationcodesupplied', 'cvcresponsecode',
 #       'creationdate', 'accountcode', 'mail_id', 'ip_id', 'card_id'
+    
+    # If the heatmaps should be saved, use current datetime to avoid overwriting existing files
+    preFileName = datetime.datetime.now().strftime("%d-%m-%y %H.%M.%S")
     
     # Import CSV file to a Panda dataframe
     df = pd.read_csv('../../Data/data_for_student_case.csv')
@@ -77,35 +86,31 @@ if __name__ == "__main__":
     settled_pivot = settled_occurence.pivot(feature1, feature2).fillna(0)
     chargeback_pivot = chargeback_occurence.pivot(feature1, feature2).fillna(0)
     
-    
+    # We want ALL possible feature values included in the heatmap,
+    # including the values that do not occur in a certain part of the dataset.
     for feature1_value in feature1_values:
         if feature1_value not in settled_pivot.index.values:
             # Force empty row into dataframe
             settled_pivot.loc[feature1_value] = 0.0
-            
         if feature1_value not in chargeback_pivot.index.values:
             # Force empty row into dataframe
             chargeback_pivot.loc[feature1_value] = 0.0
-            
     
     for feature2_value in feature2_values:
         if ('', feature2_value) not in settled_pivot.columns:
             # Force empty column into dataframe
-            settled_pivot['', feature2_value] = 0.0;
-            
+            settled_pivot['', feature2_value] = 0.0
         if ('', feature2_value) not in chargeback_pivot.columns:
             # Force empty column into dataframe
-            chargeback_pivot['', feature2_value] = 0.0;
+            chargeback_pivot['', feature2_value] = 0.0
             
-    # Reorder indexes of the dataframes
-    settled_pivot = settled_pivot.sort_index(axis=1)
-    chargeback_pivot = chargeback_pivot.sort_index(axis=1)
+    # Reorder indexes of the dataframes in both dimensions
+    settled_pivot = settled_pivot.sort_index().sort_index(axis=1)
+    chargeback_pivot = chargeback_pivot.sort_index().sort_index(axis=1)
+    all_pivot = settled_pivot + chargeback_pivot
     
-    # Compute percentages
-    settled_percentages = settled_pivot / settled_pivot.sum().sum()
-    chargeback_percentages = chargeback_pivot / chargeback_pivot.sum().sum()
-    
-    subtracted_percentages = settled_percentages - chargeback_percentages
+    # Compute fraction of fraud compared to legitimate ones
+    fraction_fraud = chargeback_pivot / all_pivot
     
     # Because the distribution of such occurances is far from linear, we usually want to look
     # at the graph on a logarithmic scale. This is achieved by replacing each value in the
@@ -113,47 +118,34 @@ if __name__ == "__main__":
     # [0, <relatively low value>], which is exactly what we want.
     settled_pivot_log = np.log(1 + settled_pivot)
     chargeback_pivot_log = np.log(1 + chargeback_pivot)
-    
 
-        
-#    # Plot the heatmaps
-#    # 1. Settled - linear scale
-#    plt.subplots(figsize=(x_size, y_size))
-#    ax_normal = plt.axes()
-#    sns.heatmap(settled_pivot, ax = ax_normal)
-#    ax_normal.set_title('1. Settled records on a linear scale')
-#    ax_normal.set_xlabel(feature2)
-#    ax_normal.set_ylabel(feature1)
+    # Settled - logarithmic scale
+    plt.subplots(figsize=(x_size, y_size))
+    ax_normal = plt.axes()
+    sns.heatmap(settled_pivot_log, ax = ax_normal, cmap="GnBu")
+    #ax_normal.set_title('Settled records (logarithmic scale)')
+    ax_normal.set_xlabel(feature2)
+    ax_normal.set_ylabel(feature1)
+    if saveToFiles:
+        plt.savefig(preFileName + " - legitimate.svg", bbox_inches='tight')
 
-    # 2. Settled - logarithmic scale
+    # Fraudulent - logarithmic scale
     plt.subplots(figsize=(x_size, y_size))
     ax_normal = plt.axes()
-    sns.heatmap(settled_pivot_log, ax = ax_normal, cmap="Blues")
-    ax_normal.set_title('2. Settled records (logarithmic scale)')
+    sns.heatmap(chargeback_pivot_log, ax = ax_normal, cmap="GnBu")
+    #ax_normal.set_title('Fraudulent records (logarithmic scale)')
+    ax_normal.set_xlabel(feature2)
+    ax_normal.set_ylabel(feature1)
+    if saveToFiles:
+        plt.savefig(preFileName + " - fraudulent.svg", bbox_inches='tight')
+    
+    # Differences - linear scale
+    plt.subplots(figsize=(x_size, y_size))
+    ax_normal = plt.axes()
+    sns.heatmap(fraction_fraud, ax = ax_normal, center=0, cmap="PiYG_r")
+    #ax_normal.set_title('Fraction of fraudulent transactions')
     ax_normal.set_xlabel(feature2)
     ax_normal.set_ylabel(feature1)
     
-#    # 3. Fraudulent - linear scale
-#    plt.subplots(figsize=(x_size, y_size))
-#    ax_normal = plt.axes()
-#    sns.heatmap(chargeback_pivot, ax = ax_normal)
-#    ax_normal.set_title('3. Fraudulent records on a linear scale')
-#    ax_normal.set_xlabel(feature2)
-#    ax_normal.set_ylabel(feature1)
-#    
-    # 4. Fraudulent - logarithmic scale
-    plt.subplots(figsize=(x_size, y_size))
-    ax_normal = plt.axes()
-    sns.heatmap(chargeback_pivot_log, ax = ax_normal, cmap="Blues")
-    ax_normal.set_title('4. Fraudulent records (logarithmic scale)')
-    ax_normal.set_xlabel(feature2)
-    ax_normal.set_ylabel(feature1)
-    
-    
-    # 5. Settled - linear scale
-    plt.subplots(figsize=(x_size, y_size))
-    ax_normal = plt.axes()
-    sns.heatmap(subtracted_percentages, ax = ax_normal, center=0, cmap="bwr_r")
-    ax_normal.set_title('5. Differences in relative occurances (blue: less fraud, red: more fraud)')
-    ax_normal.set_xlabel(feature2)
-    ax_normal.set_ylabel(feature1)
+    if saveToFiles:
+        plt.savefig(preFileName + " - fraction.svg", bbox_inches='tight')
