@@ -47,6 +47,7 @@ from sklearn.metrics import recall_score
 from imblearn.over_sampling import SMOTE 
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import roc_curve, auc
+from sklearn.grid_search import GridSearchCV
 
 def string_to_timestamp(date_string):#convert time string to float value
     time_stamp = time.strptime(date_string, '%Y-%m-%d %H:%M:%S')
@@ -137,6 +138,16 @@ if __name__ == "__main__":
         amount = float(line_ah.strip().split(',')[5])#transaction amount in minor units
         currencycode = line_ah.strip().split(',')[6]
         currencycode_set.add(currencycode)
+        if currencycode == 'AUD':
+            amount_in_eur = amount * 0.657
+        if currencycode == 'GBP':
+            amount_in_eur = amount * 1.4219
+        if currencycode == 'MXN':
+            amount_in_eur = amount * 0.0571
+        if currencycode == 'NZD':
+            amount_in_eur = amount * 0.6077
+        if currencycode == 'SEK':
+            amount_in_eur = amount * 0.1078
         shoppercountry = line_ah.strip().split(',')[7]#country code
         shoppercountry_set.add(shoppercountry)
         interaction = line_ah.strip().split(',')[8]#online transaction or subscription
@@ -163,7 +174,7 @@ if __name__ == "__main__":
         ip_id_set.add(ip_id)
         card_id = int(float(line_ah.strip().split(',')[16].replace('card','')))#card
         card_id_set.add(card_id)
-        data.append([issuercountry, txvariantcode, issuer_id, amount, currencycode,
+        data.append([issuercountry, txvariantcode, issuer_id, amount_in_eur, currencycode,
                     shoppercountry, interaction, verification, cvcresponse, creationdate_stamp,
                      accountcode, mail_id, ip_id, card_id, label, creationdate])# add the interested features here
         #y.append(label)# add the labels
@@ -256,30 +267,96 @@ usy = y_array
 
 x_train, x_test, y_train, y_test = train_test_split(usx, usy, test_size = 0.2, random_state=42)#test_size: proportion of train/test data
 #apply random forest classifier with default parameters 
-print("Random Forest Classifier")
-clf = RandomForestClassifier()
-clf.fit(x_train, y_train)
-y_pred_nosmote_randomforest = clf.predict_proba(x_test)[:,1]
-y_pred_nosmote_randomforest_bin = np.around(y_pred_nosmote_randomforest)
+#print("Random Forest Classifier")
+#clf = RandomForestClassifier()
+#clf.fit(x_train, y_train)
+#y_pred_nosmote_randomforest = clf.predict_proba(x_test)[:,1]
+#y_pred_nosmote_randomforest_bin = np.around(y_pred_nosmote_randomforest)
+#
+#print("Random Forest performance without smote")
+#print("recall score:", recall_score(y_test, y_pred_nosmote_randomforest_bin))
+#print("accuracy score:", accuracy_score(y_test, y_pred_nosmote_randomforest_bin))
+#print("f1 score:", f1_score(y_test, y_pred_nosmote_randomforest_bin))
 
-print("Random Forest performance without smote")
-print("recall score:", recall_score(y_test, y_pred_nosmote_randomforest_bin))
-print("accuracy score:", accuracy_score(y_test, y_pred_nosmote_randomforest_bin))
-print("f1 score:", f1_score(y_test, y_pred_nosmote_randomforest_bin))
 
-#Apply SMOTE 
-sm = SMOTE(random_state=12, ratio = 1.0)
-x_train_smote = x_train.astype(float)
-y_train_smote = y_train.astype(float)
-x_train_res, y_train_res = sm.fit_sample(x_train_smote, y_train_smote) 
+#Apply SMOTE with different ratios and check with random forest
+values = {}
+for i in range(1,20):
+    ratio_val = 0.1
+    while ratio_val<=1.0:
+        sm = SMOTE(ratio = ratio_val)
+        x_train_smote = x_train.astype(float)
+        y_train_smote = y_train.astype(float)
+        x_train_res, y_train_res = sm.fit_sample(x_train_smote, y_train_smote) 
+    
+        clf = RandomForestClassifier()
+        clf.fit(x_train_res, y_train_res)
+        y_pred_smote_randomforest = clf.predict_proba(x_test)[:,1]
+        y_pred_smote_randomforest_bin = np.around(y_pred_smote_randomforest)
+        print("Random Forest performance after applying smote with ratio")
+        #print (ratio_val)
+        #print("recall score:", recall_score(y_test, y_pred_smote_randomforest_bin))
+        #print("accuracy score:", accuracy_score(y_test, y_pred_smote_randomforest_bin))
+        #print("f1 score:", f1_score(y_test, y_pred_smote_randomforest_bin))
+        fscore = f1_score(y_test, y_pred_smote_randomforest_bin)
+        if ratio_val in values:
+            values[ratio_val] = values[ratio_val] + fscore
+        else:
+            values[ratio_val] = fscore
+            
+        ratio_val = ratio_val + 0.05
+        #print (values)
+print (values)
 
-clf.fit(x_train_res, y_train_res)
-y_pred_smote_randomforest = clf.predict_proba(x_test)[:,1]
-y_pred_smote_randomforest_bin = np.around(y_pred_smote_randomforest)
-print("Random Forest performance after applying smote")
-print("recall score:", recall_score(y_test, y_pred_smote_randomforest_bin))
-print("accuracy score:", accuracy_score(y_test, y_pred_smote_randomforest_bin))
-print("f1 score:", f1_score(y_test, y_pred_smote_randomforest_bin))
+    
+
+
+##Applying smote with a particular ratio and check for best parameters for random forest
+
+#First using for loops
+#sm = SMOTE(ratio=0.1)
+#x_train_smote = x_train.astype(float)
+#y_train_smote = y_train.astype(float)
+#print(len(y_train_smote))
+#print(sum(y_train_smote))
+#
+#x_train_res, y_train_res = sm.fit_sample(x_train_smote, y_train_smote) 
+##print(len(y_train_res))
+##print(sum(y_train_res))
+
+
+#n_estimators = [9,45,100,150]
+#max_depth = [5, 50, 100]
+#min_samples_leaf = [2, 50, 100]
+#        
+#for i in n_estimators:
+#    for j in max_depth:
+#        for k in min_samples_leaf:
+#            clf = RandomForestClassifier()
+#            clf.fit(x_train_res, y_train_res)
+#            y_pred_smote_randomforest = clf.predict_proba(x_test)[:,1]
+#            y_pred_smote_randomforest_bin = np.around(y_pred_smote_randomforest)
+#            print("Random Forest performance after using the values ",i,j,k)
+#            print("recall score:", recall_score(y_test, y_pred_smote_randomforest_bin))
+#            print("accuracy score:", accuracy_score(y_test, y_pred_smote_randomforest_bin))
+#            print("f1 score:", f1_score(y_test, y_pred_smote_randomforest_bin))            
+#    
+
+  
+#Or use this for grid feature   
+
+param_grid = { 
+           #"n_estimators" : [9, 18, 27, 36, 45, 54, 63],
+           "n_estimators" : [9,45,100,150],
+           "max_depth" : [5, 50, 100],
+           "min_samples_leaf" : [2, 50, 100]}
+
+CV_rfc = GridSearchCV(estimator=clf, param_grid=param_grid, cv= 10)
+CV_rfc.fit(x_train, y_train)
+print ("Best params are")
+print (CV_rfc.best_params_)
+print ("Scores of all possibilities")
+print (CV_rfc.grid_scores_)
 
 #unique, counts = np.unique(y_pred_smote_randomforest, return_counts=True)
 #print("Dict:", dict(zip(unique, counts)))
