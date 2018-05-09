@@ -11,7 +11,7 @@ import numpy as np
 import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
-import sys
+import datetime
 
 from imblearn.over_sampling import SMOTE
 
@@ -23,19 +23,30 @@ if __name__ == "__main__":
     # SETTINGS
     
     # Dimensions of the heatmaps; useful for tweaking.
-    x_size = 18
-    y_size = 3
+    x_size = 4
+    y_size = 2
     
     # Select the features to be plotted here
     # The features should be categorical, as their unique values are used
-    feature1 = 'currencycode'
-    feature2 = 'shoppercountrycode'
+    feature1 = 'cvcresponsecode'
+    feature2 = 'cardverificationcodesupplied'
+    
+    # Save the heatmaps to SVG files?
+    saveToFiles = True
+    
+    # txtvariantcode vs currencycode
+    
+    # Kerneldistributionfunction.py
+    # ScatterPlot.py
 
 #    print(df.keys())             # These are the features:
 #       'txid', 'bookingdate', 'issuercountrycode', 'txvariantcode', 'bin',
 #       'amount', 'currencycode', 'shoppercountrycode', 'shopperinteraction',
 #       'simple_journal', 'cardverificationcodesupplied', 'cvcresponsecode',
 #       'creationdate', 'accountcode', 'mail_id', 'ip_id', 'card_id'
+    
+    # If the heatmaps should be saved, use current datetime to avoid overwriting existing files
+    preFileName = datetime.datetime.now().strftime("%d-%m-%y %H.%M.%S")
     
     # Import CSV file to a Panda dataframe
     df = pd.read_csv('../../Data/data_for_student_case.csv')
@@ -97,9 +108,9 @@ if __name__ == "__main__":
             # Force empty column into dataframe
             chargeback_pivot['', feature2_value] = 0.0;
             
-    # Reorder indexes of the dataframes
-    settled_pivot = settled_pivot.sort_index(axis=1)
-    chargeback_pivot = chargeback_pivot.sort_index(axis=1)
+    # Reorder indexes of the dataframes in both dimensions
+    settled_pivot = settled_pivot.sort_index().sort_index(axis=1)
+    chargeback_pivot = chargeback_pivot.sort_index().sort_index(axis=1)
     
     # Compute percentages
     settled_percentages = settled_pivot / settled_pivot.sum().sum()
@@ -121,39 +132,51 @@ if __name__ == "__main__":
 #    plt.subplots(figsize=(x_size, y_size))
 #    ax_normal = plt.axes()
 #    sns.heatmap(settled_pivot, ax = ax_normal)
-#    ax_normal.set_title('1. Settled records on a linear scale')
+#    ax_normal.set_title('Settled records (linear scale)')
 #    ax_normal.set_xlabel(feature2)
 #    ax_normal.set_ylabel(feature1)
+#    if saveToFiles:
+#        plt.savefig(preFileName + " - heatmap 1.svg")
 
     # 2. Settled - logarithmic scale
     plt.subplots(figsize=(x_size, y_size))
     ax_normal = plt.axes()
-    sns.heatmap(settled_pivot_log, ax = ax_normal, cmap="Blues")
-    ax_normal.set_title('2. Settled records (logarithmic scale)')
+    sns.heatmap(settled_pivot_log, ax = ax_normal, cmap="Greens")
+    ax_normal.set_title('Settled records (logarithmic scale)')
     ax_normal.set_xlabel(feature2)
     ax_normal.set_ylabel(feature1)
+    if saveToFiles:
+        plt.savefig(preFileName + " - heatmap 2.svg")
     
 #    # 3. Fraudulent - linear scale
 #    plt.subplots(figsize=(x_size, y_size))
 #    ax_normal = plt.axes()
 #    sns.heatmap(chargeback_pivot, ax = ax_normal)
-#    ax_normal.set_title('3. Fraudulent records on a linear scale')
+#    ax_normal.set_title('Fraudulent records (linear scale)')
 #    ax_normal.set_xlabel(feature2)
 #    ax_normal.set_ylabel(feature1)
-#    
+#    if saveToFiles:
+#        plt.savefig(preFileName + " - heatmap 3.svg")
+
     # 4. Fraudulent - logarithmic scale
     plt.subplots(figsize=(x_size, y_size))
     ax_normal = plt.axes()
-    sns.heatmap(chargeback_pivot_log, ax = ax_normal, cmap="Blues")
-    ax_normal.set_title('4. Fraudulent records (logarithmic scale)')
+    sns.heatmap(chargeback_pivot_log, ax = ax_normal, cmap="Greens")
+    ax_normal.set_title('Fraudulent records (logarithmic scale)')
     ax_normal.set_xlabel(feature2)
     ax_normal.set_ylabel(feature1)
+    if saveToFiles:
+        plt.savefig(preFileName + " - heatmap 4.svg")
     
     
-    # 5. Settled - linear scale
+    # 5. Differences - linear scale
     plt.subplots(figsize=(x_size, y_size))
     ax_normal = plt.axes()
-    sns.heatmap(subtracted_percentages, ax = ax_normal, center=0, cmap="bwr_r")
-    ax_normal.set_title('5. Differences in relative occurances (blue: less fraud, red: more fraud)')
+    # Interesting colormaps: https://matplotlib.org/_images/sphx_glr_colormaps_004.png: bwr_r, RdYlGn, PiYG
+    sns.heatmap(subtracted_percentages, ax = ax_normal, center=0, cmap="PiYG")
+    ax_normal.set_title('Differences in relative occurances\n(green: less fraud, purple: more fraud)')
     ax_normal.set_xlabel(feature2)
     ax_normal.set_ylabel(feature1)
+    
+    if saveToFiles:
+        plt.savefig(preFileName + " - heatmap 5.svg")
