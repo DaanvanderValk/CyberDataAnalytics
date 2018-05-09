@@ -30,7 +30,7 @@ if __name__ == "__main__":
     feature2 = 'txvariantcode'
     
     # Save the heatmaps to SVG files?
-    saveToFiles = True
+    saveToFiles = False
     
     # txtvariantcode vs currencycode
     
@@ -107,12 +107,10 @@ if __name__ == "__main__":
     # Reorder indexes of the dataframes in both dimensions
     settled_pivot = settled_pivot.sort_index().sort_index(axis=1)
     chargeback_pivot = chargeback_pivot.sort_index().sort_index(axis=1)
+    all_pivot = settled_pivot + chargeback_pivot
     
-    # Compute percentages
-    settled_percentages = settled_pivot / settled_pivot.sum().sum()
-    chargeback_percentages = chargeback_pivot / chargeback_pivot.sum().sum()
-    
-    subtracted_percentages = settled_percentages - chargeback_percentages
+    # Compute fraction of fraud compared to legitimate ones
+    fraction_fraud = chargeback_pivot / all_pivot
     
     # Because the distribution of such occurances is far from linear, we usually want to look
     # at the graph on a logarithmic scale. This is achieved by replacing each value in the
@@ -120,59 +118,34 @@ if __name__ == "__main__":
     # [0, <relatively low value>], which is exactly what we want.
     settled_pivot_log = np.log(1 + settled_pivot)
     chargeback_pivot_log = np.log(1 + chargeback_pivot)
-    
 
-        
-#    # Plot the heatmaps
-#    # 1. Settled - linear scale
-#    plt.subplots(figsize=(x_size, y_size))
-#    ax_normal = plt.axes()
-#    sns.heatmap(settled_pivot, ax = ax_normal)
-#    ax_normal.set_title('Settled records (linear scale)')
-#    ax_normal.set_xlabel(feature2)
-#    ax_normal.set_ylabel(feature1)
-#    if saveToFiles:
-#        plt.savefig(preFileName + " - heatmap 1.svg", bbox_inches='tight')
-
-    # 2. Settled - logarithmic scale
+    # Settled - logarithmic scale
     plt.subplots(figsize=(x_size, y_size))
     ax_normal = plt.axes()
     sns.heatmap(settled_pivot_log, ax = ax_normal, cmap="GnBu")
-    ax_normal.set_title('Settled records (logarithmic scale)')
+    #ax_normal.set_title('Settled records (logarithmic scale)')
     ax_normal.set_xlabel(feature2)
     ax_normal.set_ylabel(feature1)
     if saveToFiles:
-        plt.savefig(preFileName + " - heatmap 2.svg", bbox_inches='tight')
-    
-#    # 3. Fraudulent - linear scale
-#    plt.subplots(figsize=(x_size, y_size))
-#    ax_normal = plt.axes()
-#    sns.heatmap(chargeback_pivot, ax = ax_normal)
-#    ax_normal.set_title('Fraudulent records (linear scale)')
-#    ax_normal.set_xlabel(feature2)
-#    ax_normal.set_ylabel(feature1)
-#    if saveToFiles:
-#        plt.savefig(preFileName + " - heatmap 3.svg", bbox_inches='tight')
+        plt.savefig(preFileName + " - legitimate.svg", bbox_inches='tight')
 
-    # 4. Fraudulent - logarithmic scale
+    # Fraudulent - logarithmic scale
     plt.subplots(figsize=(x_size, y_size))
     ax_normal = plt.axes()
     sns.heatmap(chargeback_pivot_log, ax = ax_normal, cmap="GnBu")
-    ax_normal.set_title('Fraudulent records (logarithmic scale)')
+    #ax_normal.set_title('Fraudulent records (logarithmic scale)')
     ax_normal.set_xlabel(feature2)
     ax_normal.set_ylabel(feature1)
     if saveToFiles:
-        plt.savefig(preFileName + " - heatmap 4.svg", bbox_inches='tight')
+        plt.savefig(preFileName + " - fraudulent.svg", bbox_inches='tight')
     
-    
-    # 5. Differences - linear scale
+    # Differences - linear scale
     plt.subplots(figsize=(x_size, y_size))
     ax_normal = plt.axes()
-    # Interesting colormaps: https://matplotlib.org/_images/sphx_glr_colormaps_004.png: bwr_r, RdYlGn, PiYG
-    sns.heatmap(subtracted_percentages, ax = ax_normal, center=0, cmap="RdBu")
-    ax_normal.set_title('Differences in relative occurances\n(blue: less fraud, orange: more fraud)')
+    sns.heatmap(fraction_fraud, ax = ax_normal, center=0, cmap="PiYG_r")
+    #ax_normal.set_title('Fraction of fraudulent transactions')
     ax_normal.set_xlabel(feature2)
     ax_normal.set_ylabel(feature1)
     
     if saveToFiles:
-        plt.savefig(preFileName + " - heatmap 5.svg", bbox_inches='tight')
+        plt.savefig(preFileName + " - fraction.svg", bbox_inches='tight')
