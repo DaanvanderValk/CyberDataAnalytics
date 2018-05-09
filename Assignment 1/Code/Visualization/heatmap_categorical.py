@@ -105,7 +105,7 @@ if __name__ == "__main__":
     settled_percentages = settled_pivot / settled_pivot.sum().sum()
     chargeback_percentages = chargeback_pivot / chargeback_pivot.sum().sum()
     
-    subtracted_percentages = chargeback_percentages - settled_percentages
+    subtracted_percentages = settled_percentages - chargeback_percentages
     
     # Because the distribution of such occurances is far from linear, we usually want to look
     # at the graph on a logarithmic scale. This is achieved by replacing each value in the
@@ -128,8 +128,8 @@ if __name__ == "__main__":
     # 2. Settled - logarithmic scale
     plt.subplots(figsize=(x_size, y_size))
     ax_normal = plt.axes()
-    sns.heatmap(settled_pivot_log, ax = ax_normal)
-    ax_normal.set_title('2. Settled records on a logarithmic scale')
+    sns.heatmap(settled_pivot_log, ax = ax_normal, cmap="Blues")
+    ax_normal.set_title('2. Settled records (logarithmic scale)')
     ax_normal.set_xlabel(feature2)
     ax_normal.set_ylabel(feature1)
     
@@ -144,8 +144,8 @@ if __name__ == "__main__":
     # 4. Fraudulent - logarithmic scale
     plt.subplots(figsize=(x_size, y_size))
     ax_normal = plt.axes()
-    sns.heatmap(chargeback_pivot_log, ax = ax_normal)
-    ax_normal.set_title('4. Fraudulent records on a logarithmic scale')
+    sns.heatmap(chargeback_pivot_log, ax = ax_normal, cmap="Blues")
+    ax_normal.set_title('4. Fraudulent records (logarithmic scale)')
     ax_normal.set_xlabel(feature2)
     ax_normal.set_ylabel(feature1)
     
@@ -153,7 +153,7 @@ if __name__ == "__main__":
     # 5. Settled - linear scale
     plt.subplots(figsize=(x_size, y_size))
     ax_normal = plt.axes()
-    sns.heatmap(subtracted_percentages, ax = ax_normal)
-    ax_normal.set_title('5. Differences in relative occurances')
+    sns.heatmap(subtracted_percentages, ax = ax_normal, center=0, cmap="bwr_r")
+    ax_normal.set_title('5. Differences in relative occurances (blue: less fraud, red: more fraud)')
     ax_normal.set_xlabel(feature2)
     ax_normal.set_ylabel(feature1)
