@@ -21,13 +21,13 @@ if __name__ == "__main__":
     # SETTINGS
     
     # Dimensions of the heatmaps; useful for tweaking.
-    x_size = 22
+    x_size = 4
     y_size = 2
     
     # Select the features to be plotted here
     # The features should be categorical, as their unique values are used
-    feature1 = 'currencycode'
-    feature2 = 'shoppercountrycode'
+    feature1 = 'cvcresponsecode'
+    feature2 = 'cardverificationcodesupplied'
     
     # Save the heatmaps to SVG files?
     saveToFiles = True
@@ -137,7 +137,7 @@ if __name__ == "__main__":
     # 2. Settled - logarithmic scale
     plt.subplots(figsize=(x_size, y_size))
     ax_normal = plt.axes()
-    sns.heatmap(settled_pivot_log, ax = ax_normal, cmap="Blues")
+    sns.heatmap(settled_pivot_log, ax = ax_normal, cmap="Greens")
     ax_normal.set_title('Settled records (logarithmic scale)')
     ax_normal.set_xlabel(feature2)
     ax_normal.set_ylabel(feature1)
@@ -157,7 +157,7 @@ if __name__ == "__main__":
     # 4. Fraudulent - logarithmic scale
     plt.subplots(figsize=(x_size, y_size))
     ax_normal = plt.axes()
-    sns.heatmap(chargeback_pivot_log, ax = ax_normal, cmap="Blues")
+    sns.heatmap(chargeback_pivot_log, ax = ax_normal, cmap="Greens")
     ax_normal.set_title('Fraudulent records (logarithmic scale)')
     ax_normal.set_xlabel(feature2)
     ax_normal.set_ylabel(feature1)
@@ -169,8 +169,8 @@ if __name__ == "__main__":
     plt.subplots(figsize=(x_size, y_size))
     ax_normal = plt.axes()
     # Interesting colormaps: https://matplotlib.org/_images/sphx_glr_colormaps_004.png: bwr_r, RdYlGn, PiYG
-    sns.heatmap(subtracted_percentages, ax = ax_normal, center=0, cmap="bwr_r")
-    ax_normal.set_title('Differences in relative occurances (blue: less fraud, red: more fraud)')
+    sns.heatmap(subtracted_percentages, ax = ax_normal, center=0, cmap="PiYG")
+    ax_normal.set_title('Differences in relative occurances\n(green: less fraud, purple: more fraud)')
     ax_normal.set_xlabel(feature2)
     ax_normal.set_ylabel(feature1)
     
