@@ -18,6 +18,7 @@ from itertools import groupby
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
+from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 from imblearn.over_sampling import SMOTE 
 from sklearn.linear_model import LogisticRegression
@@ -149,6 +150,7 @@ clf = RandomForestClassifier(random_state=0)
 clf.fit(x_train, y_train)
 y_pred_nosmote_randomforest = clf.predict_proba(x_test)[:,1]
 y_pred_nosmote_randomforest_bin = np.around(y_pred_nosmote_randomforest)
+print("precision score:", precision_score(y_test, y_pred_nosmote_randomforest_bin))
 print("recall score:", recall_score(y_test, y_pred_nosmote_randomforest_bin))
 print("accuracy score:", accuracy_score(y_test, y_pred_nosmote_randomforest_bin))
 print("f1 score:", f1_score(y_test, y_pred_nosmote_randomforest_bin))
@@ -157,6 +159,7 @@ print("Random Forest performance after applying smote")
 clf.fit(x_train_res, y_train_res)
 y_pred_smote_randomforest = clf.predict_proba(x_test)[:,1]
 y_pred_smote_randomforest_bin = np.around(y_pred_smote_randomforest)
+print("precision score:", precision_score(y_test, y_pred_smote_randomforest_bin))
 print("recall score:", recall_score(y_test, y_pred_smote_randomforest_bin))
 print("accuracy score:", accuracy_score(y_test, y_pred_smote_randomforest_bin))
 print("f1 score:", f1_score(y_test, y_pred_smote_randomforest_bin))
@@ -169,6 +172,7 @@ logreg.fit(x_train, y_train)
 x_test_logreg = x_test.astype(float)
 y_pred_nosmote_logisticregression = logreg.predict_proba(x_test_logreg)[:,1]
 y_pred_nosmote_logisticregression_bin = np.around(y_pred_nosmote_logisticregression)
+print("precision score:", precision_score(y_test, y_pred_nosmote_logisticregression_bin))
 print("recall score:", recall_score(y_test, y_pred_nosmote_logisticregression_bin))
 print("accuracy score:", accuracy_score(y_test, y_pred_nosmote_logisticregression_bin))
 print("f1 score:", f1_score(y_test, y_pred_nosmote_logisticregression_bin))
@@ -177,6 +181,7 @@ print("Logistic regression performance after applying smote")
 logreg.fit(x_train_res, y_train_res)
 y_pred_smote_logisticregression = logreg.predict_proba(x_test_logreg)[:,1]
 y_pred_smote_logisticregression_bin = np.around(y_pred_smote_logisticregression)
+print("precision score:", precision_score(y_test, y_pred_smote_logisticregression_bin))
 print("recall score:", recall_score(y_test, y_pred_smote_logisticregression_bin))
 print("accuracy score:", accuracy_score(y_test, y_pred_smote_logisticregression_bin))
 print("f1 score:", f1_score(y_test, y_pred_smote_logisticregression_bin))
@@ -188,6 +193,7 @@ clf = neighbors.KNeighborsClassifier(algorithm = 'kd_tree')
 clf.fit(x_train, y_train)
 y_pred_nosmote_knn = clf.predict_proba(x_test)[:,1]
 y_pred_nosmote_knn_bin = np.around(y_pred_nosmote_knn)
+print("precision score:", precision_score(y_test, y_pred_nosmote_knn_bin))
 print("recall score:", recall_score(y_test, y_pred_nosmote_knn_bin))
 print("accuracy score:", accuracy_score(y_test, y_pred_nosmote_knn_bin))
 print("f1 score:", f1_score(y_test, y_pred_nosmote_knn_bin))
@@ -196,6 +202,7 @@ print("KNN performance after applying smote")
 clf.fit(x_train_res, y_train_res)
 y_pred_smote_knn = clf.predict_proba(x_test)[:,1]
 y_pred_smote_knn_bin = np.around(y_pred_smote_knn)
+print("precision score:", precision_score(y_test, y_pred_smote_knn_bin))
 print("recall score:", recall_score(y_test, y_pred_smote_knn_bin))
 print("accuracy score:", accuracy_score(y_test, y_pred_smote_knn_bin))
 print("f1 score:", f1_score(y_test, y_pred_smote_knn_bin))
