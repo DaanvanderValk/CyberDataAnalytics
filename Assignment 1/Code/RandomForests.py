@@ -44,10 +44,13 @@ import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import recall_score
+from sklearn.metrics import precision_score
 from imblearn.over_sampling import SMOTE 
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import roc_curve, auc
 from sklearn.grid_search import GridSearchCV
+from sklearn import tree
+import graphviz
 
 def string_to_timestamp(date_string):#convert time string to float value
     time_stamp = time.strptime(date_string, '%Y-%m-%d %H:%M:%S')
@@ -266,47 +269,73 @@ usx = x_array
 usy = y_array
 
 x_train, x_test, y_train, y_test = train_test_split(usx, usy, test_size = 0.2, random_state=42)#test_size: proportion of train/test data
+print("decision tree Classifier")
+clf = tree.DecisionTreeClassifier(max_depth=6)
+clf.fit(x_train, y_train)
+dot_data = tree.export_graphviz(clf, out_file=None,class_names=["non-fraud","fraud"],filled=True,impurity=True,feature_names=["issuercountry", "txvariantcode", "issuer_id", "amount_in_eur", "currencycode",
+                    "shoppercountry", "interaction", "verification", "cvcresponse", "creationdate_stamp",
+                     "accountcode", "mail_id", "ip_id", "card_id"], node_ids=True) 
+graph = graphviz.Source(dot_data) 
+graph.render("iriss") 
+
+print ("Zeroth sample",x_test[0])
+
+path = clf.decision_path(x_test)
+print(type(path))
+print(path)
+pred = clf.predict(x_test)
+for i in range(0,len(x_test)):
+    if (pred[i] != y_test[i]):
+        print ("Wrong prediction for entry ", i)
+        print (pred[i],y_test[i])
+        print ("for row ",x_test[i])
+        break
+
+
 #apply random forest classifier with default parameters 
-#print("Random Forest Classifier")
-#clf = RandomForestClassifier()
-#clf.fit(x_train, y_train)
-#y_pred_nosmote_randomforest = clf.predict_proba(x_test)[:,1]
-#y_pred_nosmote_randomforest_bin = np.around(y_pred_nosmote_randomforest)
-#
-#print("Random Forest performance without smote")
-#print("recall score:", recall_score(y_test, y_pred_nosmote_randomforest_bin))
-#print("accuracy score:", accuracy_score(y_test, y_pred_nosmote_randomforest_bin))
-#print("f1 score:", f1_score(y_test, y_pred_nosmote_randomforest_bin))
+'''
+
+
+print("Random Forest Classifier")
+clf = RandomForestClassifier()
+clf.fit(x_train, y_train)
+y_pred_nosmote_randomforest = clf.predict_proba(x_test)[:,1]
+y_pred_nosmote_randomforest_bin = np.around(y_pred_nosmote_randomforest)
+
+print("Random Forest performance without smote")
+print("recall score:", recall_score(y_test, y_pred_nosmote_randomforest_bin))
+print("precision score:", precision_score(y_test, y_pred_nosmote_randomforest_bin))
+print("f1 score:", f1_score(y_test, y_pred_nosmote_randomforest_bin))
 
 
 #Apply SMOTE with different ratios and check with random forest
-values = {}
-for i in range(1,20):
-    ratio_val = 0.1
-    while ratio_val<=1.0:
-        sm = SMOTE(ratio = ratio_val)
-        x_train_smote = x_train.astype(float)
-        y_train_smote = y_train.astype(float)
-        x_train_res, y_train_res = sm.fit_sample(x_train_smote, y_train_smote) 
-    
-        clf = RandomForestClassifier()
-        clf.fit(x_train_res, y_train_res)
-        y_pred_smote_randomforest = clf.predict_proba(x_test)[:,1]
-        y_pred_smote_randomforest_bin = np.around(y_pred_smote_randomforest)
-        print("Random Forest performance after applying smote with ratio")
-        #print (ratio_val)
-        #print("recall score:", recall_score(y_test, y_pred_smote_randomforest_bin))
-        #print("accuracy score:", accuracy_score(y_test, y_pred_smote_randomforest_bin))
-        #print("f1 score:", f1_score(y_test, y_pred_smote_randomforest_bin))
-        fscore = f1_score(y_test, y_pred_smote_randomforest_bin)
-        if ratio_val in values:
-            values[ratio_val] = values[ratio_val] + fscore
-        else:
-            values[ratio_val] = fscore
-            
-        ratio_val = ratio_val + 0.05
-        #print (values)
-print (values)
+#values = {}
+#for i in range(1,20):
+#    ratio_val = 0.1
+#    while ratio_val<=1.0:
+#        sm = SMOTE(ratio = ratio_val)
+#        x_train_smote = x_train.astype(float)
+#        y_train_smote = y_train.astype(float)
+#        x_train_res, y_train_res = sm.fit_sample(x_train_smote, y_train_smote) 
+#    
+#        clf = RandomForestClassifier()
+#        clf.fit(x_train_res, y_train_res)
+#        y_pred_smote_randomforest = clf.predict_proba(x_test)[:,1]
+#        y_pred_smote_randomforest_bin = np.around(y_pred_smote_randomforest)
+#        print("Random Forest performance after applying smote with ratio")
+#        #print (ratio_val)
+#        #print("recall score:", recall_score(y_test, y_pred_smote_randomforest_bin))
+#        #print("accuracy score:", accuracy_score(y_test, y_pred_smote_randomforest_bin))
+#        #print("f1 score:", f1_score(y_test, y_pred_smote_randomforest_bin))
+#        fscore = f1_score(y_test, y_pred_smote_randomforest_bin)
+#        if ratio_val in values:
+#            values[ratio_val] = values[ratio_val] + fscore
+#        else:
+#            values[ratio_val] = fscore
+#            
+#        ratio_val = ratio_val + 0.05
+#        #print (values)
+#print (values)
 
     
 
@@ -345,21 +374,34 @@ print (values)
   
 #Or use this for grid feature   
 
-param_grid = { 
-           #"n_estimators" : [9, 18, 27, 36, 45, 54, 63],
-           "n_estimators" : [9,45,100,150],
-           "max_depth" : [5, 50, 100],
-           "min_samples_leaf" : [2, 50, 100]}
+#param_grid = { 
+#           #"n_estimators" : [9, 18, 27, 36, 45, 54, 63],
+#           "n_estimators" : [9,45,100,150],
+#           "max_depth" : [5, 50, 100],
+#           "min_samples_leaf" : [2, 50, 100]}
+#
+#CV_rfc = GridSearchCV(estimator=clf, param_grid=param_grid, cv= 10)
+#CV_rfc.fit(x_train, y_train)
+#print ("Best params are")
+#print (CV_rfc.best_params_)
+#print ("Scores of all possibilities")
+#print (CV_rfc.grid_scores_)
 
-CV_rfc = GridSearchCV(estimator=clf, param_grid=param_grid, cv= 10)
-CV_rfc.fit(x_train, y_train)
-print ("Best params are")
-print (CV_rfc.best_params_)
-print ("Scores of all possibilities")
-print (CV_rfc.grid_scores_)
+sm = SMOTE(random_state=12)
+x_train_smote = x_train.astype(float)
+y_train_smote = y_train.astype(float)
+print(len(y_train_smote))
+print(sum(y_train_smote))
 
-#unique, counts = np.unique(y_pred_smote_randomforest, return_counts=True)
-#print("Dict:", dict(zip(unique, counts)))
+x_train_res, y_train_res = sm.fit_sample(x_train_smote, y_train_smote) 
+
+clf = RandomForestClassifier()
+clf.fit(x_train_res, y_train_res)
+y_pred_smote_randomforest = clf.predict_proba(x_test)[:,1]
+y_pred_smote_randomforest_bin = np.around(y_pred_smote_randomforest)
+print("recall score:", recall_score(y_test, y_pred_smote_randomforest_bin))
+print("precision score:", precision_score(y_test, y_pred_smote_randomforest_bin))
+print("f1 score:", f1_score(y_test, y_pred_smote_randomforest_bin))            
 
 
 print("Logistic regression")
@@ -370,7 +412,7 @@ x_test_logreg = x_test.astype(float)
 y_pred_nosmote_logisticregression = logreg.predict_proba(x_test_logreg)[:,1]
 y_pred_nosmote_logisticregression_bin = np.around(y_pred_nosmote_logisticregression)
 print("recall score:", recall_score(y_test, y_pred_nosmote_logisticregression_bin))
-print("accuracy score:", accuracy_score(y_test, y_pred_nosmote_logisticregression_bin))
+print("precision score:", precision_score(y_test, y_pred_nosmote_logisticregression_bin))
 print("f1 score:", f1_score(y_test, y_pred_nosmote_logisticregression_bin))
 
 print("Logistic regression performance after applying smote")
@@ -378,7 +420,7 @@ logreg.fit(x_train_res, y_train_res)
 y_pred_smote_logisticregression = logreg.predict_proba(x_test_logreg)[:,1]
 y_pred_smote_logisticregression_bin = np.around(y_pred_smote_logisticregression)
 print("recall score:", recall_score(y_test, y_pred_smote_logisticregression_bin))
-print("accuracy score:", accuracy_score(y_test, y_pred_smote_logisticregression_bin))
+print("precision score:", precision_score(y_test, y_pred_smote_logisticregression_bin))
 print("f1 score:", f1_score(y_test, y_pred_smote_logisticregression_bin))
 
 
@@ -390,7 +432,7 @@ clf.fit(x_train, y_train)
 y_pred_nosmote_knn = clf.predict_proba(x_test)[:,1]
 y_pred_nosmote_knn_bin = np.around(y_pred_nosmote_knn)
 print("recall score:", recall_score(y_test, y_pred_nosmote_knn_bin))
-print("accuracy score:", accuracy_score(y_test, y_pred_nosmote_knn_bin))
+print("precision score:", precision_score(y_test, y_pred_nosmote_knn_bin))
 print("f1 score:", f1_score(y_test, y_pred_nosmote_knn_bin))
 
 print("KNN performance after applying smote")
@@ -398,79 +440,80 @@ clf.fit(x_train_res, y_train_res)
 y_pred_smote_knn = clf.predict_proba(x_test)[:,1]
 y_pred_smote_knn_bin = np.around(y_pred_smote_knn)
 print("recall score:", recall_score(y_test, y_pred_smote_knn_bin))
-print("accuracy score:", accuracy_score(y_test, y_pred_smote_knn_bin))
+print("precision score:", precision_score(y_test, y_pred_smote_knn_bin))
 print("f1 score:", f1_score(y_test, y_pred_smote_knn_bin))
 
-
-
-print("ROC curve")
-# Compute ROC data for all different classiers
-# Random forest without smote
-fpr_nosmote_randomforest, tpr_nosmote_randomforest, _ = roc_curve(y_test, y_pred_nosmote_randomforest)
-roc_auc_nosmote_randomforest = auc(fpr_nosmote_randomforest, tpr_nosmote_randomforest)
-# Random forest with smote
-fpr_smote_randomforest, tpr_smote_randomforest, _ = roc_curve(y_test, y_pred_smote_randomforest)
-roc_auc_smote_randomforest = auc(fpr_smote_randomforest, tpr_smote_randomforest)
-
-# Logistic regression without smote
-fpr_nosmote_logisticregression, tpr_nosmote_logisticregression, _ = roc_curve(y_test, y_pred_nosmote_logisticregression)
-roc_auc_nosmote_logisticregression = auc(fpr_nosmote_logisticregression, tpr_nosmote_logisticregression)
-# Logistic regression with smote
-fpr_smote_logisticregression, tpr_smote_logisticregression, _ = roc_curve(y_test, y_pred_smote_logisticregression)
-roc_auc_smote_logisticregression = auc(fpr_smote_logisticregression, tpr_smote_logisticregression)
-
-# KNN without smoke
-fpr_nosmote_knn, tpr_nosmote_knn, _ = roc_curve(y_test, y_pred_nosmote_knn)
-roc_auc_nosmote_knn = auc(fpr_nosmote_knn, tpr_nosmote_knn)
-# KNN with smoke
-fpr_smote_knn, tpr_smote_knn, _ = roc_curve(y_test, y_pred_smote_knn)
-roc_auc_smote_knn = auc(fpr_smote_knn, tpr_smote_knn)
-
-
-plt.subplots(figsize=(15, 10))
-lw = 1
-plt.plot([0, 1], [0, 1], color='gray', lw=lw, linestyle='--') # straight line through the middle
-plt.plot(fpr_nosmote_randomforest, tpr_nosmote_randomforest, color='green',
-         lw=lw, label='Random forest (area = %0.2f)' % roc_auc_nosmote_randomforest)
-plt.plot(fpr_smote_randomforest, tpr_smote_randomforest, color='darkgreen',
-         lw=lw, label='Random forest (after SMOTE) (area = %0.2f)' % roc_auc_smote_randomforest)
-plt.plot(fpr_nosmote_logisticregression, tpr_nosmote_logisticregression, color='red',
-         lw=lw, label='Logistic regression (area = %0.2f)' % roc_auc_nosmote_logisticregression)
-plt.plot(fpr_smote_logisticregression, tpr_smote_logisticregression, color='darkred',
-         lw=lw, label='Logistic regression (after SMOTE) (area = %0.2f)' % roc_auc_smote_logisticregression)
-plt.plot(fpr_nosmote_knn, tpr_nosmote_knn, color='blue',
-         lw=lw, label='KNN (area = %0.2f)' % roc_auc_nosmote_knn)
-plt.plot(fpr_smote_knn, tpr_smote_knn, color='darkblue',
-         lw=lw, label='KNN (after SMOTE) (area = %0.2f)' % roc_auc_smote_knn)
-plt.xlim([0.0, 1.0])
-plt.ylim([0.0, 1.05])
-plt.xlabel('False Positive Rate')
-plt.ylabel('True Positive Rate')
-plt.title('Receiver operating characteristic example')
-plt.legend(loc="lower right")
-plt.show()
-
-
-print("PR curve")
-plt.subplots(figsize=(15, 10))
-precision_nosmote_randomforest, recall_nosmote_randomforest, _ = precision_recall_curve(y_test, y_pred_nosmote_randomforest)
-precision_smote_randomforest, recall_smote_randomforest, _ = precision_recall_curve(y_test, y_pred_smote_randomforest)
-precision_nosmote_logisticregression, recall_nosmote_logisticregression, _ = precision_recall_curve(y_test, y_pred_nosmote_logisticregression)
-precision_smote_logisticregression, recall_smote_logisticregression, _ = precision_recall_curve(y_test, y_pred_smote_logisticregression)
-precision_nosmote_knn, recall_nosmote_knn, _ = precision_recall_curve(y_test, y_pred_nosmote_knn)
-precision_smote_knn, recall_smote_knn, _ = precision_recall_curve(y_test, y_pred_smote_knn)
-
-plt.step(recall_nosmote_randomforest, precision_nosmote_randomforest, color='green', where='post')
-plt.step(recall_smote_randomforest, precision_smote_randomforest, color='black', where='post')
-plt.step(recall_nosmote_logisticregression, precision_nosmote_logisticregression, color='red', where='post')
-plt.step(recall_smote_logisticregression, precision_smote_logisticregression, color='darkred', where='post')
-plt.step(recall_nosmote_knn, precision_nosmote_knn, color='blue', where='post')
-plt.step(recall_smote_knn, precision_smote_knn, color='darkblue', where='post')
-
-plt.plot([0.5, 0.5], color='gray', lw=lw, linestyle='--') # straight line through the middle
-
-plt.xlabel('Recall')
-plt.ylabel('Precision')
-plt.ylim([0.0, 1.05])
-plt.xlim([0.0, 1.0])
-plt.title('Precision-Recall curve: AP={0:0.2f}')
+#
+#
+#print("ROC curve")
+## Compute ROC data for all different classiers
+## Random forest without smote
+#fpr_nosmote_randomforest, tpr_nosmote_randomforest, _ = roc_curve(y_test, y_pred_nosmote_randomforest)
+#roc_auc_nosmote_randomforest = auc(fpr_nosmote_randomforest, tpr_nosmote_randomforest)
+## Random forest with smote
+#fpr_smote_randomforest, tpr_smote_randomforest, _ = roc_curve(y_test, y_pred_smote_randomforest)
+#roc_auc_smote_randomforest = auc(fpr_smote_randomforest, tpr_smote_randomforest)
+#
+## Logistic regression without smote
+#fpr_nosmote_logisticregression, tpr_nosmote_logisticregression, _ = roc_curve(y_test, y_pred_nosmote_logisticregression)
+#roc_auc_nosmote_logisticregression = auc(fpr_nosmote_logisticregression, tpr_nosmote_logisticregression)
+## Logistic regression with smote
+#fpr_smote_logisticregression, tpr_smote_logisticregression, _ = roc_curve(y_test, y_pred_smote_logisticregression)
+#roc_auc_smote_logisticregression = auc(fpr_smote_logisticregression, tpr_smote_logisticregression)
+#
+## KNN without smoke
+#fpr_nosmote_knn, tpr_nosmote_knn, _ = roc_curve(y_test, y_pred_nosmote_knn)
+#roc_auc_nosmote_knn = auc(fpr_nosmote_knn, tpr_nosmote_knn)
+## KNN with smoke
+#fpr_smote_knn, tpr_smote_knn, _ = roc_curve(y_test, y_pred_smote_knn)
+#roc_auc_smote_knn = auc(fpr_smote_knn, tpr_smote_knn)
+#
+#
+#plt.subplots(figsize=(15, 10))
+#lw = 1
+#plt.plot([0, 1], [0, 1], color='gray', lw=lw, linestyle='--') # straight line through the middle
+#plt.plot(fpr_nosmote_randomforest, tpr_nosmote_randomforest, color='green',
+#         lw=lw, label='Random forest (area = %0.2f)' % roc_auc_nosmote_randomforest)
+#plt.plot(fpr_smote_randomforest, tpr_smote_randomforest, color='darkgreen',
+#         lw=lw, label='Random forest (after SMOTE) (area = %0.2f)' % roc_auc_smote_randomforest)
+#plt.plot(fpr_nosmote_logisticregression, tpr_nosmote_logisticregression, color='red',
+#         lw=lw, label='Logistic regression (area = %0.2f)' % roc_auc_nosmote_logisticregression)
+#plt.plot(fpr_smote_logisticregression, tpr_smote_logisticregression, color='darkred',
+#         lw=lw, label='Logistic regression (after SMOTE) (area = %0.2f)' % roc_auc_smote_logisticregression)
+#plt.plot(fpr_nosmote_knn, tpr_nosmote_knn, color='blue',
+#         lw=lw, label='KNN (area = %0.2f)' % roc_auc_nosmote_knn)
+#plt.plot(fpr_smote_knn, tpr_smote_knn, color='darkblue',
+#         lw=lw, label='KNN (after SMOTE) (area = %0.2f)' % roc_auc_smote_knn)
+#plt.xlim([0.0, 1.0])
+#plt.ylim([0.0, 1.05])
+#plt.xlabel('False Positive Rate')
+#plt.ylabel('True Positive Rate')
+#plt.title('Receiver operating characteristic example')
+#plt.legend(loc="lower right")
+#plt.show()
+#
+#
+#print("PR curve")
+#plt.subplots(figsize=(15, 10))
+#precision_nosmote_randomforest, recall_nosmote_randomforest, _ = precision_recall_curve(y_test, y_pred_nosmote_randomforest)
+#precision_smote_randomforest, recall_smote_randomforest, _ = precision_recall_curve(y_test, y_pred_smote_randomforest)
+#precision_nosmote_logisticregression, recall_nosmote_logisticregression, _ = precision_recall_curve(y_test, y_pred_nosmote_logisticregression)
+#precision_smote_logisticregression, recall_smote_logisticregression, _ = precision_recall_curve(y_test, y_pred_smote_logisticregression)
+#precision_nosmote_knn, recall_nosmote_knn, _ = precision_recall_curve(y_test, y_pred_nosmote_knn)
+#precision_smote_knn, recall_smote_knn, _ = precision_recall_curve(y_test, y_pred_smote_knn)
+#
+#plt.step(recall_nosmote_randomforest, precision_nosmote_randomforest, color='green', where='post')
+#plt.step(recall_smote_randomforest, precision_smote_randomforest, color='black', where='post')
+#plt.step(recall_nosmote_logisticregression, precision_nosmote_logisticregression, color='red', where='post')
+#plt.step(recall_smote_logisticregression, precision_smote_logisticregression, color='darkred', where='post')
+#plt.step(recall_nosmote_knn, precision_nosmote_knn, color='blue', where='post')
+#plt.step(recall_smote_knn, precision_smote_knn, color='darkblue', where='post')
+#
+#plt.plot([0.5, 0.5], color='gray', lw=lw, linestyle='--') # straight line through the middle
+#
+#plt.xlabel('Recall')
+#plt.ylabel('Precision')
+#plt.ylim([0.0, 1.05])
+#plt.xlim([0.0, 1.0])
+#plt.title('Precision-Recall curve: AP={0:0.2f}')
+'''
