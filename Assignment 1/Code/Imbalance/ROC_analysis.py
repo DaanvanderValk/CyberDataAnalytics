@@ -124,7 +124,7 @@ x_array = np.array(x)
 y_array = np.array(y)
 
 # Split data into training and testing records
-x_train, x_test, y_train, y_test = train_test_split(x_array, y_array, test_size = 0.2, random_state=1)
+x_train, x_test, y_train, y_test = train_test_split(x_array, y_array, test_size = 0.2, random_state=0)
 print("Test set:", sum(y_test), "/", len(y_test), "records are fraud")
 print("Training set:", sum(y_train), "/", len(y_train), "records are fraud")
 #print("Hashes of x_train, x_test, y_train, y_test:")
