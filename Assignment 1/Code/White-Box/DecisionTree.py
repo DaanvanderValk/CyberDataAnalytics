@@ -139,7 +139,7 @@ x_train, x_test, y_train, y_test = train_test_split(x_array, y_array, test_size 
 
 
 print("decision tree Classifier")
-clf = tree.DecisionTreeClassifier(max_depth=10)
+clf = tree.DecisionTreeClassifier(max_depth=30,min_samples_split=7,random_state = 12)
 clf.fit(x_train, y_train)
 
 y_pred_smote_randomforest = clf.predict_proba(x_test)[:,1]
@@ -148,15 +148,25 @@ print("recall score:", recall_score(y_test, y_pred_smote_randomforest_bin))
 print("precision score:", precision_score(y_test, y_pred_smote_randomforest_bin))
 print("f1 score:", f1_score(y_test, y_pred_smote_randomforest_bin))            
 
-dot_data = tree.export_graphviz(clf, out_file=None,class_names=["non-fraud","fraud"],filled=True,impurity=True,feature_names=["issuercountry", "txvariantcode", "issuer_id", "amount_in_eur", "currencycode",
+from sklearn.model_selection import cross_val_score
+#Find 10 fold cross validation score for accuracy precision and f1 scores and their mean
+print ("after applying 10 fold CV")
+results = cross_val_score(estimator=clf,X=x_array,y=y_array,cv=10,scoring='recall')
+print ("Recall",results.mean())
+results = cross_val_score(estimator=clf,X=x_array,y=y_array,cv=10,scoring='precision')
+print ("Precision",results.mean())
+results = cross_val_score(estimator=clf,X=x_array,y=y_array,cv=10,scoring='f1')
+print ("F1 Score",results.mean())
+'''
+dot_data = tree.export_graphviz(clf, out_file=None,class_names=["non-fraud","fraud"],filled=True,impurity=True,feature_names=["issuercountry", "txvariantcode", "issuer_id", "amount", "currencycode",
                     "shoppercountry", "interaction", "verification", "cvcresponse", "creationdate_stamp",
                      "accountcode", "mail_id", "ip_id", "card_id"], node_ids=True) 
 graph = graphviz.Source(dot_data) 
-# Save the decision tree in a pdf file names cardtree
+# Save the decision tree in a pdf file named cardtree
 graph.render("cardtree") 
-
-
-path = clf.decision_path(x_test)
+#
+#
+path = clf.decision_path(x_train)
 #print(type(path))
 #print(path)
 pred = clf.predict(x_test)
@@ -165,36 +175,40 @@ flag1 = False
 flag2 = False
 index_of_TN = 0
 index_of_TP = 0
-for i in range(1000,len(x_test)):
-    if flag1 == False :
-        if (pred[i] == y_test[i] == 0):
-            print ("True Negative at index ", i)
-            index_of_TN = i
-            print (pred[i],y_test[i])
-            print ("for row ",x_test[i])
-            flag1 = True
-    if flag2 == False :
-        if (pred[i] == y_test[i] == 1):
-            print ("True positive at index ", i)
-            print (pred[i],y_test[i])
-            print ("for row ",x_test[i])
-            index_of_TP = i
-            if(flag1 == True):
-                break
+#for i in range(1000,len(x_test)):
+#    if flag1 == False :
+#        if (pred[i] == y_test[i] == 0):
+#            print ("True Negative at index ", i)
+#            index_of_TN = i
+#            print (pred[i],y_test[i])
+#            print ("for row ",x_test[i])
+#            flag1 = True
+#    if flag2 == False :
+#        if (pred[i] == y_test[i] == 1):
+#            print ("True positive at index ", i)
+#            print (pred[i],y_test[i])
+#            print ("for row ",x_test[i])
+#            index_of_TP = i
+#            if(flag1 == True):
+#                break
         
 
 cx = scipy.sparse.coo_matrix(path)
 
 #find relevant entries in the decision tree for True negative case and true positive case
+#for i,j,v in zip(cx.row, cx.col, cx.data):
+#    if i == index_of_TN :
+#        print ("Nodes for True Negative")
+#        print ("(%d, %d), %s" % (i,j,v))
+#    if i == 141700:
+#        print ("Nodes for True positive")
+#        print ("(%d, %d), %s" % (i,j,v))
+
 for i,j,v in zip(cx.row, cx.col, cx.data):
-    if i == index_of_TN :
-        print ("Nodes for True Negative")
+    if j == 34 :
+        print ("Node found")
         print ("(%d, %d), %s" % (i,j,v))
-    if i == index_of_TP:
-        print ("Nodes for True positive")
-        print ("(%d, %d), %s" % (i,j,v))
-        
-'''
+        print (x_train[i])
 #for i in range(0,len(x_test)):
 #    if (pred[i] == 1):
 #        print ("positive at index ", i)
@@ -238,8 +252,8 @@ for i,j,v in zip(cx.row, cx.col, cx.data):
         
 #try for difference combinationsfor max depth and min sample split and obtain the better performing ones
 #for i in [2,3,4,5,6,7,8,9]:
-#    #for j in [6,9,12,15,21,27,30,33,37]:
-#    for j in [30,33,37]:
+#    for j in [6,9,12,15,21,27,30,33,37]:
+#    #for j in [30,33,37]:
 #        print("decision tree Classifier for ",i,j)
 #        clf = tree.DecisionTreeClassifier(min_samples_split = i,max_depth=j, random_state = 12)
 #        clf.fit(x_train, y_train)
@@ -247,5 +261,4 @@ for i,j,v in zip(cx.row, cx.col, cx.data):
 #        y_pred_smote_randomforest_bin = np.around(y_pred_smote_randomforest)
 #        print("f1 score:", f1_score(y_test, y_pred_smote_randomforest_bin))
 #    
-
 '''
