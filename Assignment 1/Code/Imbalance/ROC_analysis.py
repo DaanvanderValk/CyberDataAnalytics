@@ -1,6 +1,6 @@
 # This first part of this script has been provided by the lecturers.
 # We used their code to import the data and do some simple preprocessing
-# The relevant code for this Task 2 (Imbalance) starts at line 144
+# The relevant code for this Task 2 (Imbalance) starts at line 127
 
 get_ipython().magic(u'matplotlib inline')
 import datetime
