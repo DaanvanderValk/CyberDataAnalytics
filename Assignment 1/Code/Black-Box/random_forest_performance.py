@@ -158,8 +158,8 @@ for train_index, test_index in splitted:
 
 # Finally, present results
 print("Precision:", np.around(precision/10, 4))
-print("Recall:", np.around(precision/10, 4))
-print("F1 score:", np.around(precision/10, 4))
+print("Recall:", np.around(recall/10, 4))
+print("F1 score:", np.around(f1/10, 4))
 
 print('True Positives:', str(TP), "(good: found fraud cases)")
 print('False Positives:', str(FP), "(bad: benign transactions marked as fraud)")
