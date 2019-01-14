@@ -23,8 +23,18 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
 path = clf.decision_path(X_test)
 print(type(path))
 print(path)
-graph = graphviz.Source(dot_data) 
-graph.render("iris") 
-print ("Zeroth sample",X_test[0])
-pred = clf.predict(X_test)
-print (pred[0])
+
+print("Entry type:", type(path[0]))
+print("First entry:", path[0])
+print("Second entry:", path[1])
+
+path_array = path.toarray()
+print("path_array:\n", path_array)
+
+#0, 2, 13, 16
+
+#graph = graphviz.Source(dot_data) 
+#graph.render("iris") 
+#print ("Zeroth sample",X_test[0])
+#pred = clf.predict(X_test)
+#print (pred[0])

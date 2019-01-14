@@ -1,0 +1,592 @@
+<svg width="3101.25" height="1208.75" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <metadata id="metadata8">image/svg+xml</metadata>
+ <defs>
+  <clipPath clipPathUnits="userSpaceOnUse" id="clipPath18">
+   <path d="m36,36l2408.5,0l0,895l-2408.5,0l0,-895z" id="path20"/>
+  </clipPath>
+  <marker refY="50" refX="50" markerHeight="5" markerWidth="5" viewBox="0 0 100 100" se_type="rightarrow" orient="auto" markerUnits="strokeWidth" id="se_marker_end_svg_15">
+   <path stroke-width="10" stroke="#002aff" fill="#002aff" d="m100,50l-100,40l30,-40l-30,-40z"/>
+  </marker>
+  <marker refY="50" refX="50" markerHeight="5" markerWidth="5" viewBox="0 0 100 100" se_type="rightarrow" orient="auto" markerUnits="strokeWidth" id="se_marker_end_svg_16">
+   <path stroke-width="10" stroke="#002aff" fill="#002aff" d="m100,50l-100,40l30,-40l-30,-40z"/>
+  </marker>
+  <marker refY="50" refX="50" markerHeight="5" markerWidth="5" viewBox="0 0 100 100" se_type="rightarrow" orient="auto" markerUnits="strokeWidth" id="se_marker_end_svg_20">
+   <path stroke-width="10" stroke="#002aff" fill="#002aff" d="m100,50l-100,40l30,-40l-30,-40z"/>
+  </marker>
+  <marker refY="50" refX="50" markerHeight="5" markerWidth="5" viewBox="0 0 100 100" se_type="rightarrow" orient="auto" markerUnits="strokeWidth" id="se_marker_end_svg_21">
+   <path stroke-width="10" stroke="#002aff" fill="#002aff" d="m100,50l-100,40l30,-40l-30,-40z"/>
+  </marker>
+  <marker refY="50" refX="50" markerHeight="5" markerWidth="5" viewBox="0 0 100 100" se_type="rightarrow" orient="auto" markerUnits="strokeWidth" id="se_marker_end_svg_22">
+   <path stroke-width="10" stroke="#002aff" fill="#002aff" d="m100,50l-100,40l30,-40l-30,-40z"/>
+  </marker>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <g id="g10" transform="matrix(1.25,0,0,-1.25,0,1208.75) ">
+   <g id="g12"/>
+   <g id="g14">
+    <g id="g16" clip-path="url(#clipPath18)">
+     <path fill="#ffffff" fill-rule="nonzero" d="m36,36l0,895l2408.5,0l0,-895l-2408.5,0z" id="path22"/>
+     <path fill="none" stroke="#fffffe" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="0" d="m36,36l0,895l2408.5,0l0,-895l-2408.5,0z" id="path24"/>
+     <path fill="#e58139" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1382,927l-140,0l0,-98l140,0l0,98z" id="path26"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,1289,911.80078) " id="text28">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002" y="0" id="tspan30">node #0</tspan>
+      <tspan x="-38.999996 -36.017998 -30.011995 -24.019997 -17.271996 -11.279996 -6.771996 -0.037996002 7.4660039 14.214004 20.962004 24.700005 29.194004 35.942005 39.694004 47.940002 56.172005 59.924004 66.672005 73.420006 77.172005" y="15.000006" id="tspan32">issuercountry &lt;= 97.5</tspan>
+      <tspan x="-10.5 -3.7520001 -0.75599998 5.9920001 8.974 12.726 20.958 24.709999 31.458 35.209999 41.958 48.720001" y="30.000011" id="tspan34">gini = 0.003</tspan>
+      <tspan x="-28 -22.007999 -16.016001 -5.5300002 1.974 4.9559999 10.948 16.954 20.691999 28.938 32.689999 39.438 46.186001 52.933998 59.681999 66.43" y="45.000019" id="tspan36">samples = 189358</tspan>
+      <tspan x="-38.000004 -31.252005 -25.260004 -22.278004 -15.530004 -9.5380039 -5.7860041 2.445996 6.1979961 10.705996 17.453997 24.201996 30.949997 37.697994 44.445995 51.193996 54.945995 58.697994 65.445999 72.193993 78.955994" y="60.000023" id="tspan38">value = [189075, 283]</tspan>
+      <tspan x="-26.499998 -19.765999 -16.769999 -10.791998 -4.7859979 1.206002 4.9580021 13.190002 16.942001 23.690002 31.194002 37.942001 42.450001 46.944 51.452003 57.43 64.178001" y="75.000031" id="tspan40">class = non-fraud</tspan>
+     </text>
+     <path fill="#e58139" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1253,793l-138,0l0,-98l138,0l0,98z" id="path42"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,1161,777.80078) " id="text44">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002" y="0" id="tspan46">node #1</tspan>
+      <tspan x="-12.000002 -9.0180016 -1.514002 5.9899979 8.9719982 16.475998 20.227999 28.459997 36.705997 40.443996 47.205997 50.943996" y="15.000006" id="tspan48">ip_id &lt;= 4.5</tspan>
+      <tspan x="-10.5 -3.7520001 -0.75599998 5.9920001 8.974 12.726 20.958 24.709999 31.458 35.209999 41.958 48.720001" y="30.000011" id="tspan50">gini = 0.002</tspan>
+      <tspan x="-28 -22.007999 -16.016001 -5.5300002 1.974 4.9559999 10.948 16.954 20.691999 28.938 32.689999 39.438 46.186001 52.933998 59.681999 66.43" y="45.000019" id="tspan52">samples = 180914</tspan>
+      <tspan x="-38.000004 -31.252005 -25.260004 -22.278004 -15.530004 -9.5380039 -5.7860041 2.445996 6.1979961 10.705996 17.453997 24.201996 30.949997 37.697994 44.445995 51.193996 54.945995 58.697994 65.445999 72.193993 78.955994" y="60.000023" id="tspan54">value = [180768, 146]</tspan>
+      <tspan x="-26.499998 -19.765999 -16.769999 -10.791998 -4.7859979 1.206002 4.9580021 13.190002 16.942001 23.690002 31.194002 37.942001 42.450001 46.944 51.452003 57.43 64.178001" y="75.000031" id="tspan56">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1265.426,828.973c-9,-9.282 -18.496,-19.078 -27.703,-28.571" id="path58"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1240.227,797.957l-9.473,-4.742l4.449,9.613l5.024,-4.871z" id="path60"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,1216.8672,814.51172) " id="text62">
+      <tspan x="0 8.9879999 13.482 20.243999" y="0" id="tspan64">True</tspan>
+     </text>
+     <path fill="#e58139" fill-opacity="0.984314" fill-rule="nonzero" d="m1503.5,793l-125,0l0,-98l125,0l0,98z" id="path66"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1503.5,793l-125,0l0,-98l125,0l0,98z" id="path68"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,1414.5,777.80078) " id="text70">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan72">node #22</tspan>
+      <tspan x="-25.500006 -22.518005 -15.014006 -7.510006 -4.5280061 2.9759941 6.727994 14.959994 23.205994 26.943995 33.705994 40.453995 47.201996 53.949993 60.697994 67.445992 71.19799" y="15.000006" id="tspan74">ip_id &lt;= 352124.0</tspan>
+      <tspan x="-7 -0.252 2.744 9.4919996 12.474 16.226 24.458 28.209999 34.958 38.709999 45.458 52.220001" y="30.000011" id="tspan76">gini = 0.032</tspan>
+      <tspan x="-17.5 -11.508 -5.5159998 4.9699998 12.474 15.456 21.448 27.454 31.191999 39.438 43.189999 49.938 56.686001 63.433998" y="45.000019" id="tspan78">samples = 8444</tspan>
+      <tspan x="-28 -21.252001 -15.26 -12.278 -5.5300002 0.46200001 4.2140002 12.446 16.198 20.705999 27.454 34.202 40.950001 47.698002 51.450001 55.202 61.950001 68.697998 75.445999" y="60.000023" id="tspan80">value = [8307, 137]</tspan>
+      <tspan x="-22.999998 -16.265999 -13.269998 -7.2919979 -1.285998 4.7060022 8.4580021 16.690002 20.442001 27.190002 34.694 41.442001 45.950001 50.444 54.952003 60.93 67.678001" y="75.000031" id="tspan82">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1358.938,828.973c9.07,-9.282 18.64,-19.078 27.917,-28.571" id="path84"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1389.395,802.813l4.488,-9.598l-9.492,4.703l5.004,4.895z" id="path86"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,1379.168,814.51172) " id="text88">
+      <tspan x="0 8.2460003 14.238 17.219999 23.226" y="0" id="tspan90">False</tspan>
+     </text>
+     <path fill="#e58139" fill-opacity="0" fill-rule="nonzero" d="m1096.5,651.5l-115,0l0,-83l115,0l0,83z" id="path92"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1096.5,651.5l-115,0l0,-83l115,0l0,83z" id="path94"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,1016,636.30078) " id="text96">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002" y="0" id="tspan98">node #2</tspan>
+      <tspan x="-3.5 3.2479999 6.244 12.992 15.974 19.726 27.958 31.709999 38.458 42.209999" y="15.000006" id="tspan100">gini = 0.5</tspan>
+      <tspan x="-10.999996 -5.0079961 0.98400402 11.470004 18.974005 21.956003 27.948004 33.954002 37.692005 45.938004 49.690002" y="30.000011" id="tspan102">samples = 2</tspan>
+      <tspan x="-14.499996 -7.751996 -1.7599961 1.2220041 7.9700041 13.962004 17.714005 25.946005 29.698004 34.206005 40.954002 44.706005 48.458004 55.206005" y="45.000019" id="tspan104">value = [1, 1]</tspan>
+      <tspan x="-26.499998 -19.765999 -16.769999 -10.791998 -4.7859979 1.206002 4.9580021 13.190002 16.942001 23.690002 31.194002 37.942001 42.450001 46.944 51.452003 57.43 64.178001" y="60.000023" id="tspan106">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1131.242,694.973c-12.996,-11.832 -26.91,-24.496 -39.887,-36.313" id="path108"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1093.586,655.961l-9.75,-4.145l5.039,9.321l4.711,-5.176z" id="path110"/>
+     <path fill="#e58139" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1253,659l-138,0l0,-98l138,0l0,98z" id="path112"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,1161,643.80078) " id="text114">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002" y="0" id="tspan116">node #3</tspan>
+      <tspan x="-35.499996 -29.507996 -19.021996 -11.517996 -4.7699962 1.978004 5.7160039 9.4680042 17.700005 25.932005 29.684004 36.432003 43.194004 49.942005 56.690002 63.438004 70.186005 73.938004" y="15.000006" id="tspan118">amount &lt;= 727750.0</tspan>
+      <tspan x="-10.5 -3.7520001 -0.75599998 5.9920001 8.974 12.726 20.958 24.709999 31.458 35.209999 41.958 48.720001" y="30.000011" id="tspan120">gini = 0.002</tspan>
+      <tspan x="-28 -22.007999 -16.016001 -5.5300002 1.974 4.9559999 10.948 16.954 20.691999 28.938 32.689999 39.438 46.186001 52.933998 59.681999 66.43" y="45.000019" id="tspan122">samples = 180912</tspan>
+      <tspan x="-38.000004 -31.252005 -25.260004 -22.278004 -15.530004 -9.5380039 -5.7860041 2.445996 6.1979961 10.705996 17.453997 24.201996 30.949997 37.697994 44.445995 51.193996 54.945995 58.697994 65.445999 72.193993 78.955994" y="60.000023" id="tspan124">value = [180767, 145]</tspan>
+      <tspan x="-26.499998 -19.765999 -16.769999 -10.791998 -4.7859979 1.206002 4.9580021 13.190002 16.942001 23.690002 31.194002 37.942001 42.450001 46.944 51.452003 57.43 64.178001" y="75.000031" id="tspan126">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1184,694.973c0,-8.282 0,-16.969 0,-25.489" id="path128"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1187.5,669.215l-3.5,-10l-3.5,10l7,0z" id="path130"/>
+     <path fill="#e58139" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m903,525l-138,0l0,-98l138,0l0,98z" id="path132"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,811,509.80078) " id="text134">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002" y="0" id="tspan136">node #4</tspan>
+      <tspan x="-36.000008 -29.266006 -22.518005 -18.010006 -13.516006 -7.5240059 -0.77600598 5.957994 12.719994 19.453995 26.957994 34.447994 40.439995 44.191994 52.423992 60.669994 64.407997 71.169991 74.907997" y="15.000006" id="tspan138">currencycode &lt;= 3.5</tspan>
+      <tspan x="-10.5 -3.7520001 -0.75599998 5.9920001 8.974 12.726 20.958 24.709999 31.458 35.209999 41.958 48.720001" y="30.000011" id="tspan140">gini = 0.002</tspan>
+      <tspan x="-28 -22.007999 -16.016001 -5.5300002 1.974 4.9559999 10.948 16.954 20.691999 28.938 32.689999 39.438 46.186001 52.933998 59.681999 66.43" y="45.000019" id="tspan142">samples = 180904</tspan>
+      <tspan x="-38.000004 -31.252005 -25.260004 -22.278004 -15.530004 -9.5380039 -5.7860041 2.445996 6.1979961 10.705996 17.453997 24.201996 30.949997 37.697994 44.445995 51.193996 54.945995 58.697994 65.445999 72.193993 78.955994" y="60.000023" id="tspan144">value = [180761, 143]</tspan>
+      <tspan x="-26.499998 -19.765999 -16.769999 -10.791998 -4.7859979 1.206002 4.9580021 13.190002 16.942001 23.690002 31.194002 37.942001 42.450001 46.944 51.452003 57.43 64.178001" y="75.000031" id="tspan146">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1114.738,565.18c-2.922,-1.465 -5.843,-2.867 -8.738,-4.18c-62.742,-28.441 -137.793,-50.812 -193.152,-65.293" id="path148"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m913.656,492.301l-10.558,0.883l8.804,5.894l1.754,-6.777z" id="path150"/>
+     <path fill="#e58139" fill-opacity="0.666667" fill-rule="nonzero" d="m1255,525l-142,0l0,-98l142,0l0,98z" id="path152"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1255,525l-142,0l0,-98l142,0l0,98z" id="path154"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,1157.5,509.80078) " id="text156">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan158">node #19</tspan>
+      <tspan x="-36.500004 -33.518002 -27.512003 -21.520002 -14.772002 -8.7800016 -4.2720022 3.217998 6.2139978 13.703998 17.455997 25.701998 33.933998 37.685997 44.433998 51.181999 57.929996 64.678001 71.439995 78.187996 81.939995" y="15.000006" id="tspan160">issuer_id &lt;= 543696.5</tspan>
+      <tspan x="-7 -0.252 2.744 9.4919996 12.474 16.226 24.458 28.209999 34.958 38.709999 45.458 52.220001" y="30.000011" id="tspan162">gini = 0.375</tspan>
+      <tspan x="-7.5 -1.5080003 4.4839997 14.97 22.473999 25.455999 31.448 37.453999 41.192001 49.438 53.189999" y="45.000019" id="tspan164">samples = 8</tspan>
+      <tspan x="-11 -4.2520003 1.7399998 4.7219996 11.47 17.462 21.214001 29.445999 33.197998 37.706001 44.453999 48.206001 51.958 58.706001" y="60.000023" id="tspan166">value = [6, 2]</tspan>
+      <tspan x="-23.000002 -16.266003 -13.270002 -7.2920022 -1.2860022 4.7059979 8.4579983 16.689999 20.441998 27.189999 34.693996 41.441998 45.949997 50.443996 54.952 60.929996 67.678001" y="75.000031" id="tspan168">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1184,560.973c0,-8.282 0,-16.969 0,-25.489" id="path170"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1187.5,535.215l-3.5,-10l-3.5,10l7,0z" id="path172"/>
+     <path fill="#e58139" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m505.5,391l-133,0l0,-98l133,0l0,98z" id="path174"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,416,375.80078) " id="text176">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002" y="0" id="tspan178">node #5</tspan>
+      <tspan x="-35.499996 -29.507996 -19.021996 -11.517996 -4.7699962 1.978004 5.7160039 9.4680042 17.700005 25.932005 29.684004 36.432003 43.194004 49.942005 56.690002 63.438004 70.186005 73.938004" y="15.000006" id="tspan180">amount &lt;= 298950.0</tspan>
+      <tspan x="-10.5 -3.7520001 -0.75599998 5.9920001 8.974 12.726 20.958 24.709999 31.458 35.209999 41.958 48.720001" y="30.000011" id="tspan182">gini = 0.001</tspan>
+      <tspan x="-28 -22.007999 -16.016001 -5.5300002 1.974 4.9559999 10.948 16.954 20.691999 28.938 32.689999 39.438 46.186001 52.933998 59.681999 66.43" y="45.000019" id="tspan184">samples = 162763</tspan>
+      <tspan x="-34.500004 -27.752005 -21.760004 -18.778004 -12.030004 -6.0380039 -2.2860041 5.9459958 9.6979961 14.205996 20.953997 27.701996 34.449997 41.197994 47.945995 54.693996 58.445995 62.197994 68.945999 75.693993" y="60.000023" id="tspan186">value = [162716, 47]</tspan>
+      <tspan x="-26.499998 -19.765999 -16.769999 -10.791998 -4.7859979 1.206002 4.9580021 13.190002 16.942001 23.690002 31.194002 37.942001 42.450001 46.944 51.452003 57.43 64.178001" y="75.000031" id="tspan188">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m764.746,451.855c-69.879,-23.351 -177.492,-59.312 -249.699,-83.441" id="path190"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m516.133,365.086l-10.594,0.152l8.375,6.489l2.219,-6.641z" id="path192"/>
+     <path fill="#e58139" fill-opacity="0.996078" fill-rule="nonzero" d="m897,391l-126,0l0,-98l126,0l0,98z" id="path194"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m897,391l-126,0l0,-98l126,0l0,98z" id="path196"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,807.5,375.80078) " id="text198">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan200">node #12</tspan>
+      <tspan x="-28.499996 -22.507996 -12.021996 -4.5179958 2.2300041 8.9780045 12.716004 16.468004 24.700005 32.932003 36.684006 43.432003 50.194004 56.942005 63.690002 70.438004 74.190002" y="15.000006" id="tspan202">amount &lt;= 32475.0</tspan>
+      <tspan x="-7 -0.252 2.744 9.4919996 12.474 16.226 24.458 28.209999 34.958 38.709999 45.458 52.220001" y="30.000011" id="tspan204">gini = 0.011</tspan>
+      <tspan x="-21 -15.008 -9.0159998 1.47 8.974 11.956 17.948 23.954 27.691999 35.938 39.689999 46.438 53.186001 59.933998 66.681999" y="45.000019" id="tspan206">samples = 18141</tspan>
+      <tspan x="-28 -21.252001 -15.26 -12.278 -5.5300002 0.46200001 4.2140002 12.446 16.198 20.705999 27.454 34.202 40.950001 47.698002 54.445999 58.198002 61.950001 68.697998 75.445999" y="60.000023" id="tspan208">value = [18045, 96]</tspan>
+      <tspan x="-22.999998 -16.265999 -13.269998 -7.2919979 -1.285998 4.7060022 8.4580021 16.690002 20.442001 27.190002 34.694 41.442001 45.950001 50.444 54.952003 60.93 67.678001" y="75.000031" id="tspan210">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m834,426.973c0,-8.282 0,-16.969 0,-25.489" id="path212"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m837.5,401.215l-3.5,-10l-3.5,10l7,0z" id="path214"/>
+     <path fill="#e58139" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m307.5,257l-131,0l0,-98l131,0l0,98z" id="path216"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,219,241.80078) " id="text218">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002" y="0" id="tspan220">node #6</tspan>
+      <tspan x="-26.999994 -24.017994 -17.255995 -13.517994 -7.5399938 -3.0319941 2.9460061 9.694006 13.432006 16.414005 23.918007 30.666006 34.418007 42.650005 50.896008 54.634007 61.396008 65.134003" y="15.000006" id="tspan222">interaction &lt;= 0.5</tspan>
+      <tspan x="-10.5 -3.7520001 -0.75599998 5.9920001 8.974 12.726 20.958 24.709999 31.458 35.209999 41.958 48.720001" y="30.000011" id="tspan224">gini = 0.001</tspan>
+      <tspan x="-28 -22.007999 -16.016001 -5.5300002 1.974 4.9559999 10.948 16.954 20.691999 28.938 32.689999 39.438 46.186001 52.933998 59.681999 66.43" y="45.000019" id="tspan226">samples = 162637</tspan>
+      <tspan x="-34.500004 -27.752005 -21.760004 -18.778004 -12.030004 -6.0380039 -2.2860041 5.9459958 9.6979961 14.205996 20.953997 27.701996 34.449997 41.197994 47.945995 54.693996 58.445995 62.197994 68.945999 75.693993" y="60.000023" id="tspan228">value = [162595, 42]</tspan>
+      <tspan x="-26.499998 -19.765999 -16.769999 -10.791998 -4.7859979 1.206002 4.9580021 13.190002 16.942001 23.690002 31.194002 37.942001 42.450001 46.944 51.452003 57.43 64.178001" y="75.000031" id="tspan230">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m372.305,296.313c-18.102,-12.129 -37.809,-25.336 -56.285,-37.719" id="path232"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m317.879,255.629l-10.254,-2.656l6.359,8.472l3.895,-5.816z" id="path234"/>
+     <path fill="#e58139" fill-opacity="0.956863" fill-rule="nonzero" d="m499.5,257l-121,0l0,-98l121,0l0,98z" id="path236"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m499.5,257l-121,0l0,-98l121,0l0,98z" id="path238"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,416,241.80078) " id="text240">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002" y="0" id="tspan242">node #9</tspan>
+      <tspan x="-29.500002 -22.766003 -16.774002 -12.280002 -4.7760019 2.727998 5.7099981 13.213998 16.965998 25.197998 33.443996 37.181999 43.943996 50.691998 57.439999 64.187996 67.939995" y="15.000006" id="tspan244">card_id &lt;= 3150.5</tspan>
+      <tspan x="-10.5 -3.7520001 -0.75599998 5.9920001 8.974 12.726 20.958 24.709999 31.458 35.209999 41.958 48.720001" y="30.000011" id="tspan246">gini = 0.076</tspan>
+      <tspan x="-17.999996 -12.007996 -6.015996 4.4700041 11.974004 14.956004 20.948004 26.954004 30.692003 38.938004 42.690002 49.438004 56.186005" y="45.000019" id="tspan248">samples = 126</tspan>
+      <tspan x="-21 -14.252 -8.2600002 -5.2779999 1.47 7.4619999 11.214 19.445999 23.198 27.705999 34.453999 41.202 47.950001 51.702 55.453999 62.202" y="60.000023" id="tspan250">value = [121, 5]</tspan>
+      <tspan x="-26.499998 -19.765999 -16.769999 -10.791998 -4.7859979 1.206002 4.9580021 13.190002 16.942001 23.690002 31.194002 37.942001 42.450001 46.944 51.452003 57.43 64.178001" y="75.000031" id="tspan252">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m439,292.973c0,-8.282 0,-16.969 0,-25.489" id="path254"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m442.5,267.215l-3.5,-10l-3.5,10l7,0z" id="path256"/>
+     <path fill="#e58139" fill-opacity="0.996078" fill-rule="nonzero" d="m158,123l-118,0l0,-83l118,0l0,83z" id="path258"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m158,123l-118,0l0,-83l118,0l0,83z" id="path260"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,76,107.80078) " id="text262">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002" y="0" id="tspan264">node #7</tspan>
+      <tspan x="-10.5 -3.7520001 -0.75599998 5.9920001 8.974 12.726 20.958 24.709999 31.458 35.209999 41.958 48.720001" y="15.000006" id="tspan266">gini = 0.006</tspan>
+      <tspan x="-21 -15.008 -9.0159998 1.47 8.974 11.956 17.948 23.954 27.691999 35.938 39.689999 46.438 53.186001 59.933998" y="30.000011" id="tspan268">samples = 5129</tspan>
+      <tspan x="-28 -21.252001 -15.26 -12.278 -5.5300002 0.46200001 4.2140002 12.446 16.198 20.705999 27.454 34.202 40.950001 47.698002 51.450001 55.202 61.950001 68.697998" y="45.000019" id="tspan270">value = [5113, 16]</tspan>
+      <tspan x="-26.499998 -19.765999 -16.769999 -10.791998 -4.7859979 1.206002 4.9580021 13.190002 16.942001 23.690002 31.194002 37.942001 42.450001 46.944 51.452003 57.43 64.178001" y="60.000023" id="tspan272">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m186.711,158.863c-10.875,-9.468 -22.281,-19.398 -33.137,-28.851" id="path274"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m155.625,127.156l-9.84,-3.926l5.242,9.208l4.598,-5.282z" id="path276"/>
+     <path fill="#e58139" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m307.5,123l-131,0l0,-83l131,0l0,83z" id="path278"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,219,107.80078) " id="text280">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002" y="0" id="tspan282">node #8</tspan>
+      <tspan x="-3.5 3.2479999 6.244 12.992 15.974 19.726 27.958 31.709999 38.458 42.209999" y="15.000006" id="tspan284">gini = 0.0</tspan>
+      <tspan x="-28 -22.007999 -16.016001 -5.5300002 1.974 4.9559999 10.948 16.954 20.691999 28.938 32.689999 39.438 46.186001 52.933998 59.681999 66.43" y="30.000011" id="tspan286">samples = 157508</tspan>
+      <tspan x="-34.500004 -27.752005 -21.760004 -18.778004 -12.030004 -6.0380039 -2.2860041 5.9459958 9.6979961 14.205996 20.953997 27.701996 34.449997 41.197994 47.945995 54.693996 58.445995 62.197994 68.945999 75.693993" y="45.000019" id="tspan288">value = [157482, 26]</tspan>
+      <tspan x="-26.499998 -19.765999 -16.769999 -10.791998 -4.7859979 1.206002 4.9580021 13.190002 16.942001 23.690002 31.194002 37.942001 42.450001 46.944 51.452003 57.43 64.178001" y="60.000023" id="tspan290">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m242,158.863c0,-8.367 0,-17.093 0,-25.527" id="path292"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m245.5,133.23l-3.5,-10l-3.5,10l7,0z" id="path294"/>
+     <path fill="#399de5" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m416.5,123l-91,0l0,-83l91,0l0,83z" id="path296"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,344.5,107.80078) " id="text298">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan300">node #10</tspan>
+      <tspan x="0 6.7480001 9.7440004 16.492001 19.474001 23.226 31.458 35.209999 41.958 45.709999" y="15.000006" id="tspan302">gini = 0.0</tspan>
+      <tspan x="-7.4999962 -1.507996 4.484004 14.970004 22.474005 25.456003 31.448004 37.454002 41.192005 49.438004 53.190002" y="30.000011" id="tspan304">samples = 1</tspan>
+      <tspan x="-10.999996 -4.251996 1.7400039 4.7220039 11.470004 17.462004 21.214005 29.446005 33.198006 37.706005 44.454002 48.206005 51.958004 58.706005" y="45.000019" id="tspan306">value = [0, 1]</tspan>
+      <tspan x="-9.9999952 -3.2659955 -0.2699956 5.7080045 11.714005 17.706005 21.458004 29.690004 33.442005 37.950005 42.444004 48.436005 55.184006" y="60.000023" id="tspan308">class = fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m412.711,158.863c-4.773,-8.734 -9.758,-17.859 -14.551,-26.64" id="path310"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m401.113,130.328l-7.867,-7.098l1.723,10.454l6.144,-3.356z" id="path312"/>
+     <path fill="#e58139" fill-opacity="0.968627" fill-rule="nonzero" d="m549.5,123l-115,0l0,-83l115,0l0,83z" id="path314"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m549.5,123l-115,0l0,-83l115,0l0,83z" id="path316"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,465.5,107.80078) " id="text318">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan320">node #11</tspan>
+      <tspan x="-7 -0.252 2.744 9.4919996 12.474 16.226 24.458 28.209999 34.958 38.709999 45.458 52.220001" y="15.000006" id="tspan322">gini = 0.062</tspan>
+      <tspan x="-14.499996 -8.5079956 -2.515996 7.9700041 15.474004 18.456003 24.448004 30.454004 34.192005 42.438004 46.190002 52.938004 59.686005" y="30.000011" id="tspan324">samples = 125</tspan>
+      <tspan x="-17.5 -10.752 -4.7600002 -1.778 4.9699998 10.962 14.714 22.945999 26.698 31.205999 37.953999 44.702 51.450001 55.202 58.953999 65.702003" y="45.000019" id="tspan326">value = [121, 4]</tspan>
+      <tspan x="-22.999998 -16.265999 -13.269998 -7.2919979 -1.285998 4.7060022 8.4580021 16.690002 20.442001 27.190002 34.694 41.442001 45.950001 50.444 54.952003 60.93 67.678001" y="60.000023" id="tspan328">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m459.492,158.863c3.68,-8.64 7.52,-17.668 11.223,-26.363" id="path330"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m473.965,133.805l0.695,-10.575l-7.137,7.833l6.442,2.742z" id="path332"/>
+     <path fill="#e58139" fill-opacity="0.996078" fill-rule="nonzero" d="m821,257l-126,0l0,-98l126,0l0,98z" id="path334"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m821,257l-126,0l0,-98l126,0l0,98z" id="path336"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,731.5,241.80078) " id="text338">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan340">node #13</tspan>
+      <tspan x="-28.499996 -22.507996 -12.021996 -4.5179958 2.2300041 8.9780045 12.716004 16.468004 24.700005 32.932003 36.684006 43.432003 50.194004 56.942005 63.690002 70.438004 74.190002" y="15.000006" id="tspan342">amount &lt;= 25650.0</tspan>
+      <tspan x="-7 -0.252 2.744 9.4919996 12.474 16.226 24.458 28.209999 34.958 38.709999 45.458 52.220001" y="30.000011" id="tspan344">gini = 0.006</tspan>
+      <tspan x="-21 -15.008 -9.0159998 1.47 8.974 11.956 17.948 23.954 27.691999 35.938 39.689999 46.438 53.186001 59.933998 66.681999" y="45.000019" id="tspan346">samples = 17693</tspan>
+      <tspan x="-28 -21.252001 -15.26 -12.278 -5.5300002 0.46200001 4.2140002 12.446 16.198 20.705999 27.454 34.202 40.950001 47.698002 54.445999 58.198002 61.950001 68.697998 75.445999" y="60.000023" id="tspan348">value = [17643, 50]</tspan>
+      <tspan x="-22.999998 -16.265999 -13.269998 -7.2919979 -1.285998 4.7060022 8.4580021 16.690002 20.442001 27.190002 34.694 41.442001 45.950001 50.444 54.952003 60.93 67.678001" y="75.000031" id="tspan350">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m806.348,292.973c-5.032,-8.735 -10.321,-17.926 -15.485,-26.891" id="path352"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m793.781,264.133l-8.023,-6.918l1.957,10.41l6.066,-3.492z" id="path354"/>
+     <path fill="#e58139" fill-opacity="0.886275" fill-rule="nonzero" d="m981,257l-142,0l0,-98l142,0l0,98z" id="path356"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m981,257l-142,0l0,-98l142,0l0,98z" id="path358"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,883.5,241.80078) " id="text360">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan362">node #16</tspan>
+      <tspan x="-36.500004 -33.518002 -27.512003 -21.520002 -14.772002 -8.7800016 -4.2720022 3.217998 6.2139978 13.703998 17.455997 25.701998 33.933998 37.685997 44.433998 51.181999 57.929996 64.678001 71.439995 78.187996 81.939995" y="15.000006" id="tspan364">issuer_id &lt;= 533985.5</tspan>
+      <tspan x="-7 -0.252 2.744 9.4919996 12.474 16.226 24.458 28.209999 34.958 38.709999 45.458 52.220001" y="30.000011" id="tspan366">gini = 0.184</tspan>
+      <tspan x="-14.499996 -8.5079956 -2.515996 7.9700041 15.474004 18.456003 24.448004 30.454004 34.192005 42.438004 46.190002 52.938004 59.686005" y="45.000019" id="tspan368">samples = 448</tspan>
+      <tspan x="-21 -14.252 -8.2600002 -5.2779999 1.47 7.4619999 11.214 19.445999 23.198 27.705999 34.453999 41.202 47.950001 51.702 55.453999 62.202 68.949997" y="60.000023" id="tspan370">value = [402, 46]</tspan>
+      <tspan x="-22.999998 -16.265999 -13.269998 -7.2919979 -1.285998 4.7060022 8.4580021 16.690002 20.442001 27.190002 34.694 41.442001 45.950001 50.444 54.952003 60.93 67.678001" y="75.000031" id="tspan372">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m861.652,292.973c5.032,-8.735 10.321,-17.926 15.485,-26.891" id="path374"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m880.285,267.625l1.957,-10.41l-8.023,6.918l6.066,3.492z" id="path376"/>
+     <path fill="#e58139" fill-opacity="0.996078" fill-rule="nonzero" d="m692.5,123l-125,0l0,-83l125,0l0,83z" id="path378"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m692.5,123l-125,0l0,-83l125,0l0,83z" id="path380"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,603.5,107.80078) " id="text382">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan384">node #14</tspan>
+      <tspan x="-7 -0.252 2.744 9.4919996 12.474 16.226 24.458 28.209999 34.958 38.709999 45.458 52.220001" y="15.000006" id="tspan386">gini = 0.004</tspan>
+      <tspan x="-21 -15.008 -9.0159998 1.47 8.974 11.956 17.948 23.954 27.691999 35.938 39.689999 46.438 53.186001 59.933998 66.681999" y="30.000011" id="tspan388">samples = 17124</tspan>
+      <tspan x="-28 -21.252001 -15.26 -12.278 -5.5300002 0.46200001 4.2140002 12.446 16.198 20.705999 27.454 34.202 40.950001 47.698002 54.445999 58.198002 61.950001 68.697998 75.445999" y="45.000019" id="tspan390">value = [17088, 36]</tspan>
+      <tspan x="-22.999998 -16.265999 -13.269998 -7.2919979 -1.285998 4.7060022 8.4580021 16.690002 20.442001 27.190002 34.694 41.442001 45.950001 50.444 54.952003 60.93 67.678001" y="60.000023" id="tspan392">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m708.512,158.863c-9.641,-9.375 -19.75,-19.207 -29.379,-28.574" id="path394"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m681.484,127.695l-9.609,-4.465l4.73,9.481l4.879,-5.016z" id="path396"/>
+     <path fill="#e58139" fill-opacity="0.976471" fill-rule="nonzero" d="m825.5,123l-115,0l0,-83l115,0l0,83z" id="path398"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m825.5,123l-115,0l0,-83l115,0l0,83z" id="path400"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,741.5,107.80078) " id="text402">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan404">node #15</tspan>
+      <tspan x="-7 -0.252 2.744 9.4919996 12.474 16.226 24.458 28.209999 34.958 38.709999 45.458 52.220001" y="15.000006" id="tspan406">gini = 0.048</tspan>
+      <tspan x="-14.499996 -8.5079956 -2.515996 7.9700041 15.474004 18.456003 24.448004 30.454004 34.192005 42.438004 46.190002 52.938004 59.686005" y="30.000011" id="tspan408">samples = 569</tspan>
+      <tspan x="-21 -14.252 -8.2600002 -5.2779999 1.47 7.4619999 11.214 19.445999 23.198 27.705999 34.453999 41.202 47.950001 51.702 55.453999 62.202 68.949997" y="45.000019" id="tspan410">value = [555, 14]</tspan>
+      <tspan x="-22.999998 -16.265999 -13.269998 -7.2919979 -1.285998 4.7060022 8.4580021 16.690002 20.442001 27.190002 34.694 41.442001 45.950001 50.444 54.952003 60.93 67.678001" y="60.000023" id="tspan412">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m761.867,158.863c0.672,-8.367 1.371,-17.093 2.051,-25.527" id="path414"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m767.418,133.48l-2.691,-10.25l-4.289,9.688l6.98,0.562z" id="path416"/>
+     <path fill="#e58139" fill-opacity="0.921569" fill-rule="nonzero" d="m958.5,123l-115,0l0,-83l115,0l0,83z" id="path418"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m958.5,123l-115,0l0,-83l115,0l0,83z" id="path420"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,874.5,107.80078) " id="text422">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan424">node #17</tspan>
+      <tspan x="-7 -0.252 2.744 9.4919996 12.474 16.226 24.458 28.209999 34.958 38.709999 45.458 52.220001" y="15.000006" id="tspan426">gini = 0.134</tspan>
+      <tspan x="-14.499996 -8.5079956 -2.515996 7.9700041 15.474004 18.456003 24.448004 30.454004 34.192005 42.438004 46.190002 52.938004 59.686005" y="30.000011" id="tspan428">samples = 347</tspan>
+      <tspan x="-21 -14.252 -8.2600002 -5.2779999 1.47 7.4619999 11.214 19.445999 23.198 27.705999 34.453999 41.202 47.950001 51.702 55.453999 62.202 68.949997" y="45.000019" id="tspan430">value = [322, 25]</tspan>
+      <tspan x="-22.999998 -16.265999 -13.269998 -7.2919979 -1.285998 4.7060022 8.4580021 16.690002 20.442001 27.190002 34.694 41.442001 45.950001 50.444 54.952003 60.93 67.678001" y="60.000023" id="tspan432">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m906.52,158.863c-0.606,-8.367 -1.235,-17.093 -1.844,-25.527" id="path434"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m908.156,132.953l-4.211,-9.723l-2.769,10.227l6.98,-0.504z" id="path436"/>
+     <path fill="#e58139" fill-opacity="0.737255" fill-rule="nonzero" d="m1091.5,123l-115,0l0,-83l115,0l0,83z" id="path438"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1091.5,123l-115,0l0,-83l115,0l0,83z" id="path440"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,1007.5,107.80078) " id="text442">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan444">node #18</tspan>
+      <tspan x="-7 -0.252 2.744 9.4919996 12.474 16.226 24.458 28.209999 34.958 38.709999 45.458 52.220001" y="15.000006" id="tspan446">gini = 0.329</tspan>
+      <tspan x="-14.499996 -8.5079956 -2.515996 7.9700041 15.474004 18.456003 24.448004 30.454004 34.192005 42.438004 46.190002 52.938004 59.686005" y="30.000011" id="tspan448">samples = 101</tspan>
+      <tspan x="-17.5 -10.752 -4.7600002 -1.778 4.9699998 10.962 14.714 22.945999 26.698 31.205999 37.953999 44.702 48.453999 52.206001 58.953999 65.702003" y="45.000019" id="tspan450">value = [80, 21]</tspan>
+      <tspan x="-22.999998 -16.265999 -13.269998 -7.2919979 -1.285998 4.7060022 8.4580021 16.690002 20.442001 27.190002 34.694 41.442001 45.950001 50.444 54.952003 60.93 67.678001" y="60.000023" id="tspan452">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m957.941,158.863c9.25,-9.285 18.942,-19.015 28.188,-28.297" id="path454"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m988.855,132.785l4.579,-9.555l-9.539,4.618l4.96,4.937z" id="path456"/>
+     <path fill="#e58139" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1154.5,383.5l-115,0l0,-83l115,0l0,83z" id="path458"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,1070.5,368.30078) " id="text460">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan462">node #20</tspan>
+      <tspan x="0 6.7480001 9.7440004 16.492001 19.474001 23.226 31.458 35.209999 41.958 45.709999" y="15.000006" id="tspan464">gini = 0.0</tspan>
+      <tspan x="-7.4999962 -1.507996 4.484004 14.970004 22.474005 25.456003 31.448004 37.454002 41.192005 49.438004 53.190002" y="30.000011" id="tspan466">samples = 5</tspan>
+      <tspan x="-10.999996 -4.251996 1.7400039 4.7220039 11.470004 17.462004 21.214005 29.446005 33.198006 37.706005 44.454002 48.206005 51.958004 58.706005" y="45.000019" id="tspan468">value = [5, 0]</tspan>
+      <tspan x="-22.999998 -16.265999 -13.269998 -7.2919979 -1.285998 4.7060022 8.4580021 16.690002 20.442001 27.190002 34.694 41.442001 45.950001 50.444 54.952003 60.93 67.678001" y="60.000023" id="tspan470">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1152.344,426.973c-7.434,-11.282 -15.367,-23.317 -22.836,-34.649" id="path472"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1132.328,390.238l-8.426,-6.422l2.582,10.278l5.844,-3.856z" id="path474"/>
+     <path fill="#399de5" fill-opacity="0.498039" fill-rule="nonzero" d="m1263.5,383.5l-91,0l0,-83l91,0l0,83z" id="path476"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1263.5,383.5l-91,0l0,-83l91,0l0,83z" id="path478"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,1191.5,368.30078) " id="text480">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan482">node #21</tspan>
+      <tspan x="-7 -0.252 2.744 9.4919996 12.474 16.226 24.458 28.209999 34.958 38.709999 45.458 52.220001" y="15.000006" id="tspan484">gini = 0.444</tspan>
+      <tspan x="-7.5 -1.5080003 4.4839997 14.97 22.473999 25.455999 31.448 37.453999 41.192001 49.438 53.189999" y="30.000011" id="tspan486">samples = 3</tspan>
+      <tspan x="-11 -4.2520003 1.7399998 4.7219996 11.47 17.462 21.214001 29.445999 33.197998 37.706001 44.453999 48.206001 51.958 58.706001" y="45.000019" id="tspan488">value = [1, 2]</tspan>
+      <tspan x="-10 -3.2659998 -0.2699998 5.7080002 11.714 17.705999 21.458 29.690001 33.442001 37.950001 42.444 48.436001 55.184002" y="60.000023" id="tspan490">class = fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1196.371,426.973c2.789,-10.836 5.762,-22.371 8.582,-33.313" id="path492"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1208.383,394.375l-0.895,-10.559l-5.886,8.813l6.781,1.746z" id="path494"/>
+     <path fill="#e58139" fill-opacity="0.984314" fill-rule="nonzero" d="m1504,659l-126,0l0,-98l126,0l0,98z" id="path496"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1504,659l-126,0l0,-98l126,0l0,98z" id="path498"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,1414.5,643.80078) " id="text500">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan502">node #23</tspan>
+      <tspan x="-28.499996 -22.507996 -12.021996 -4.5179958 2.2300041 8.9780045 12.716004 16.468004 24.700005 32.932003 36.684006 43.432003 50.194004 56.942005 63.690002 70.438004 74.190002" y="15.000006" id="tspan504">amount &lt;= 79765.0</tspan>
+      <tspan x="-7 -0.252 2.744 9.4919996 12.474 16.226 24.458 28.209999 34.958 38.709999 45.458 52.220001" y="30.000011" id="tspan506">gini = 0.032</tspan>
+      <tspan x="-17.5 -11.508 -5.5159998 4.9699998 12.474 15.456 21.448 27.454 31.191999 39.438 43.189999 49.938 56.686001 63.433998" y="45.000019" id="tspan508">samples = 8443</tspan>
+      <tspan x="-28 -21.252001 -15.26 -12.278 -5.5300002 0.46200001 4.2140002 12.446 16.198 20.705999 27.454 34.202 40.950001 47.698002 51.450001 55.202 61.950001 68.697998 75.445999" y="60.000023" id="tspan510">value = [8307, 136]</tspan>
+      <tspan x="-22.999998 -16.265999 -13.269998 -7.2919979 -1.285998 4.7060022 8.4580021 16.690002 20.442001 27.190002 34.694 41.442001 45.950001 50.444 54.952003 60.93 67.678001" y="75.000031" id="tspan512">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1441,694.973c0,-8.282 0,-16.969 0,-25.489" id="path514"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1444.5,669.215l-3.5,-10l-3.5,10l7,0z" id="path516"/>
+     <path fill="#399de5" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1613.5,651.5l-91,0l0,-83l91,0l0,83z" id="path518"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,1541.5,636.30078) " id="text520">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan522">node #48</tspan>
+      <tspan x="0 6.7480001 9.7440004 16.492001 19.474001 23.226 31.458 35.209999 41.958 45.709999" y="15.000006" id="tspan524">gini = 0.0</tspan>
+      <tspan x="-7.4999962 -1.507996 4.484004 14.970004 22.474005 25.456003 31.448004 37.454002 41.192005 49.438004 53.190002" y="30.000011" id="tspan526">samples = 1</tspan>
+      <tspan x="-10.999996 -4.251996 1.7400039 4.7220039 11.470004 17.462004 21.214005 29.446005 33.198006 37.706005 44.454002 48.206005 51.944004 58.706005" y="45.000019" id="tspan528">value = [0, 1]</tspan>
+      <tspan x="-9.9999952 -3.2659955 -0.2699956 5.7080045 11.714005 17.706005 21.458004 29.690004 33.442005 37.950005 42.444004 48.436005 55.184006" y="60.000023" id="tspan530">class = fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1487.211,694.973c11.168,-11.61 23.113,-24.024 34.297,-35.649" id="path532"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1524.32,661.449l4.41,-9.633l-9.457,4.782l5.047,4.851z" id="path534"/>
+     <path fill="#e58139" fill-opacity="0.992157" fill-rule="nonzero" d="m1554.5,525l-227,0l0,-98l227,0l0,98z" id="path536"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1554.5,525l-227,0l0,-98l227,0l0,98z" id="path538"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,1414.5,509.80078) " id="text540">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan542">node #24</tspan>
+      <tspan x="-79 -72.265999 -67.757996 -61.779999 -55.787998 -52.049999 -49.053997 -41.563999 -34.815998 -27.311998 -21.319998 -17.581999 -11.589998 -4.099998 1.906002 5.644002 11.636002 22.122002 29.612001 33.364002 41.610001 49.842003 53.594002 60.342003 67.250008 73.998009 80.74601 87.494011 94.256004 101.00401 107.75201 114.50001 121.24801 125.00001" y="15.000006" id="tspan544">creationdate_stamp &lt;= 1446167552.0</tspan>
+      <tspan x="-6.9999862 -0.251986 2.744014 9.4920139 12.474014 16.226013 24.458014 28.210014 34.958015 38.710014 45.458015 52.220013" y="30.000011" id="tspan546">gini = 0.013</tspan>
+      <tspan x="-17.499987 -11.507986 -5.515986 4.9700141 12.474014 15.456014 21.448013 27.454014 31.192015 39.438015 43.190014 49.938015 56.686012 63.434013" y="45.000019" id="tspan548">samples = 2697</tspan>
+      <tspan x="-24.499987 -17.751986 -11.759986 -8.7779856 -2.0299859 3.962014 7.7140141 15.946014 19.698013 24.206015 30.954014 37.702015 44.450012 51.198013 54.950012 58.702015 65.450012 72.198013" y="60.000023" id="tspan550">value = [2680, 17]</tspan>
+      <tspan x="-22.999985 -16.265984 -13.269984 -7.2919841 -1.285984 4.7060161 8.4580164 16.690016 20.442017 27.190016 34.694016 41.442017 45.950016 50.444016 54.952015 60.930016 67.678017" y="75.000031" id="tspan552">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1441,560.973c0,-8.282 0,-16.969 0,-25.489" id="path554"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1444.5,535.215l-3.5,-10l-3.5,10l7,0z" id="path556"/>
+     <path fill="#e58139" fill-opacity="0.980392" fill-rule="nonzero" d="m2066,525l-146,0l0,-98l146,0l0,98z" id="path558"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m2066,525l-146,0l0,-98l146,0l0,98z" id="path560"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,1966.5,509.80078) " id="text562">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan564">node #35</tspan>
+      <tspan x="-38.5 -35.518002 -29.511999 -23.52 -16.771999 -10.78 -6.2719998 0.46200001 7.9660001 14.714 21.462 25.200001 29.694 36.442001 40.194 48.439999 56.672001 60.424 67.171997 73.919998 80.667999 84.419998" y="15.000006" id="tspan566">issuercountry &lt;= 113.5</tspan>
+      <tspan x="-7 -0.252 2.744 9.4919996 12.474 16.226 24.458 28.209999 34.958 38.709999 45.458 52.220001" y="30.000011" id="tspan568">gini = 0.041</tspan>
+      <tspan x="-17.5 -11.508 -5.5159998 4.9699998 12.474 15.456 21.448 27.454 31.191999 39.438 43.189999 49.938 56.686001 63.433998" y="45.000019" id="tspan570">samples = 5746</tspan>
+      <tspan x="-28 -21.252001 -15.26 -12.278 -5.5300002 0.46200001 4.2140002 12.446 16.198 20.705999 27.454 34.202 40.950001 47.698002 51.450001 55.202 61.950001 68.697998 75.445999" y="60.000023" id="tspan572">value = [5627, 119]</tspan>
+      <tspan x="-22.999998 -16.265999 -13.269998 -7.2919979 -1.285998 4.7060022 8.4580021 16.690002 20.442001 27.190002 34.694 41.442001 45.950001 50.444 54.952003 60.93 67.678001" y="75.000031" id="tspan574">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1504.277,565.289c3.231,-1.559 6.481,-3.004 9.723,-4.289c132.266,-52.465 297.984,-72.258 395.785,-79.656" id="path576"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1910.188,484.824l9.718,-4.222l-10.226,-2.762l0.508,6.984z" id="path578"/>
+     <path fill="#e58139" fill-opacity="0.992157" fill-rule="nonzero" d="m1521.5,391l-227,0l0,-98l227,0l0,98z" id="path580"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1521.5,391l-227,0l0,-98l227,0l0,98z" id="path582"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,1381.5,375.80078) " id="text584">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan586">node #25</tspan>
+      <tspan x="-79 -72.265999 -67.757996 -61.779999 -55.787998 -52.049999 -49.053997 -41.563999 -34.815998 -27.311998 -21.319998 -17.581999 -11.589998 -4.099998 1.906002 5.644002 11.636002 22.122002 29.612001 33.364002 41.610001 49.842003 53.594002 60.342003 67.250008 73.998009 80.74601 87.494011 94.256004 101.00401 107.75201 114.50001 121.24801 125.00001" y="15.000006" id="tspan588">creationdate_stamp &lt;= 1435815296.0</tspan>
+      <tspan x="-6.9999862 -0.251986 2.744014 9.4920139 12.474014 16.226013 24.458014 28.210014 34.958015 38.710014 45.458015 52.220013" y="30.000011" id="tspan590">gini = 0.012</tspan>
+      <tspan x="-17.499987 -11.507986 -5.515986 4.9700141 12.474014 15.456014 21.448013 27.454014 31.192015 39.438015 43.190014 49.938015 56.686012 63.434013" y="45.000019" id="tspan592">samples = 2687</tspan>
+      <tspan x="-24.499987 -17.751986 -11.759986 -8.7779856 -2.0299859 3.962014 7.7140141 15.946014 19.698013 24.206015 30.954014 37.702015 44.450012 51.198013 54.950012 58.702015 65.450012 72.198013" y="60.000023" id="tspan594">value = [2671, 16]</tspan>
+      <tspan x="-22.999985 -16.265984 -13.269984 -7.2919841 -1.285984 4.7060161 8.4580164 16.690016 20.442017 27.190016 34.694016 41.442017 45.950016 50.444016 54.952015 60.930016 67.678017" y="75.000031" id="tspan596">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1428.992,426.973c-2.113,-8.465 -4.336,-17.352 -6.512,-26.051" id="path598"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1425.875,400.066l-5.82,-8.851l-0.973,10.551l6.793,-1.7z" id="path600"/>
+     <path fill="#e58139" fill-opacity="0.890196" fill-rule="nonzero" d="m1672,391l-132,0l0,-98l132,0l0,98z" id="path602"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1672,391l-132,0l0,-98l132,0l0,98z" id="path604"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,1579.5,375.80078) " id="text606">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan608">node #32</tspan>
+      <tspan x="-31.5 -21.014 -15.022 -12.04 -9.0439997 -1.54 1.442 8.9460001 12.698 20.93 29.162001 32.914001 39.661999 46.41 53.158001 59.919998 66.667999 73.416 77.167999" y="15.000006" id="tspan610">mail_id &lt;= 293620.0</tspan>
+      <tspan x="-3.5 3.2479999 6.244 12.992 15.974 19.726 27.958 31.709999 38.458 42.209999 48.958" y="30.000011" id="tspan612">gini = 0.18</tspan>
+      <tspan x="-10.999996 -5.0079961 0.98400402 11.470004 18.974005 21.956003 27.948004 33.954002 37.692005 45.938004 49.690002 56.438004" y="45.000019" id="tspan614">samples = 10</tspan>
+      <tspan x="-10.999996 -4.251996 1.7400039 4.7220039 11.470004 17.462004 21.214005 29.446005 33.198006 37.706005 44.454002 48.206005 51.958004 58.706005" y="60.000023" id="tspan616">value = [9, 1]</tspan>
+      <tspan x="-22.999998 -16.265999 -13.269998 -7.2919979 -1.285998 4.7060022 8.4580021 16.690002 20.442001 27.190002 34.694 41.442001 45.950001 50.444 54.952003 60.93 67.678001" y="75.000031" id="tspan618">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1501.035,426.973c11.942,-9.555 24.567,-19.653 36.758,-29.407" id="path620"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1540.109,400.195l5.625,-8.98l-9.996,3.512l4.371,5.468z" id="path622"/>
+     <path fill="#e58139" fill-opacity="0.964706" fill-rule="nonzero" d="m1280.5,257l-227,0l0,-98l227,0l0,98z" id="path624"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1280.5,257l-227,0l0,-98l227,0l0,98z" id="path626"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,1140.5,241.80078) " id="text628">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan630">node #26</tspan>
+      <tspan x="-79 -72.265999 -67.757996 -61.779999 -55.787998 -52.049999 -49.053997 -41.563999 -34.815998 -27.311998 -21.319998 -17.581999 -11.589998 -4.099998 1.906002 5.644002 11.636002 22.122002 29.612001 33.364002 41.610001 49.842003 53.594002 60.342003 67.250008 73.998009 80.74601 87.494011 94.256004 101.00401 107.75201 114.50001 121.24801 125.00001" y="15.000006" id="tspan632">creationdate_stamp &lt;= 1435804672.0</tspan>
+      <tspan x="-6.9999862 -0.251986 2.744014 9.4920139 12.474014 16.226013 24.458014 28.210014 34.958015 38.710014 45.458015 52.220013" y="30.000011" id="tspan634">gini = 0.065</tspan>
+      <tspan x="-10.999982 -5.0079818 0.98401803 11.470018 18.974018 21.956018 27.948017 33.954018 37.692017 45.938019 49.690018 56.438019" y="45.000019" id="tspan636">samples = 59</tspan>
+      <tspan x="-14.499982 -7.7519822 -1.759982 1.222018 7.9700179 13.962018 17.714018 25.946018 29.698017 34.206017 40.954018 47.702019 51.454018 55.206017 61.954018" y="60.000023" id="tspan638">value = [57, 2]</tspan>
+      <tspan x="-22.999985 -16.265984 -13.269984 -7.2919841 -1.285984 4.7060161 8.4580164 16.690016 20.442017 27.190016 34.694016 41.442017 45.950016 50.444016 54.952015 60.930016 67.678017" y="75.000031" id="tspan640">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1320.313,292.973c-18.36,-10.055 -37.817,-20.711 -56.485,-30.938" id="path642"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1265.48,258.949l-10.453,-1.734l7.09,7.871l3.363,-6.137z" id="path644"/>
+     <path fill="#e58139" fill-opacity="0.996078" fill-rule="nonzero" d="m1525.5,257l-227,0l0,-98l227,0l0,98z" id="path646"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1525.5,257l-227,0l0,-98l227,0l0,98z" id="path648"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,1385.5,241.80078) " id="text650">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan652">node #29</tspan>
+      <tspan x="-79 -72.265999 -67.757996 -61.779999 -55.787998 -52.049999 -49.053997 -41.563999 -34.815998 -27.311998 -21.319998 -17.581999 -11.589998 -4.099998 1.906002 5.644002 11.636002 22.122002 29.612001 33.364002 41.610001 49.842003 53.594002 60.342003 67.250008 73.998009 80.74601 87.494011 94.256004 101.00401 107.75201 114.50001 121.24801 125.00001" y="15.000006" id="tspan654">creationdate_stamp &lt;= 1444617216.0</tspan>
+      <tspan x="-6.9999862 -0.251986 2.744014 9.4920139 12.474014 16.226013 24.458014 28.210014 34.958015 38.710014 45.458015 52.220013" y="30.000011" id="tspan656">gini = 0.011</tspan>
+      <tspan x="-17.499987 -11.507986 -5.515986 4.9700141 12.474014 15.456014 21.448013 27.454014 31.192015 39.438015 43.190014 49.938015 56.686012 63.434013" y="45.000019" id="tspan658">samples = 2628</tspan>
+      <tspan x="-24.499987 -17.751986 -11.759986 -8.7779856 -2.0299859 3.962014 7.7140141 15.946014 19.698013 24.206015 30.954014 37.702015 44.450012 51.198013 54.950012 58.702015 65.450012 72.198013" y="60.000023" id="tspan660">value = [2614, 14]</tspan>
+      <tspan x="-22.999985 -16.265984 -13.269984 -7.2919841 -1.285984 4.7060161 8.4580164 16.690016 20.442017 27.190016 34.694016 41.442017 45.950016 50.444016 54.952015 60.930016 67.678017" y="75.000031" id="tspan662">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1409.457,292.973c0.25,-8.282 0.512,-16.969 0.77,-25.489" id="path664"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1413.734,267.316l-3.195,-10.101l-3.801,9.887l6.996,0.214z" id="path666"/>
+     <path fill="#e58139" fill-opacity="0.984314" fill-rule="nonzero" d="m1224.5,123l-115,0l0,-83l115,0l0,83z" id="path668"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1224.5,123l-115,0l0,-83l115,0l0,83z" id="path670"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,1140.5,107.80078) " id="text672">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan674">node #27</tspan>
+      <tspan x="-7 -0.252 2.744 9.4919996 12.474 16.226 24.458 28.209999 34.958 38.709999 45.458 52.220001" y="15.000006" id="tspan676">gini = 0.034</tspan>
+      <tspan x="-10.999996 -5.0079961 0.98400402 11.470004 18.974005 21.956003 27.948004 33.954002 37.692005 45.938004 49.690002 56.438004" y="30.000011" id="tspan678">samples = 58</tspan>
+      <tspan x="-14.499996 -7.751996 -1.7599961 1.2220041 7.9700041 13.962004 17.714005 25.946005 29.698004 34.206005 40.954002 47.702003 51.454002 55.206005 61.954002" y="45.000019" id="tspan680">value = [57, 1]</tspan>
+      <tspan x="-22.999998 -16.265999 -13.269998 -7.2919979 -1.285998 4.7060022 8.4580021 16.690002 20.442001 27.190002 34.694 41.442001 45.950001 50.444 54.952003 60.93 67.678001" y="60.000023" id="tspan682">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1167,158.863c0,-8.367 0,-17.093 0,-25.527" id="path684"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1170.5,133.23l-3.5,-10l-3.5,10l7,0z" id="path686"/>
+     <path fill="#399de5" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1333.5,123l-91,0l0,-83l91,0l0,83z" id="path688"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,1261.5,107.80078) " id="text690">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan692">node #28</tspan>
+      <tspan x="0 6.7480001 9.7440004 16.492001 19.474001 23.226 31.458 35.209999 41.958 45.709999" y="15.000006" id="tspan694">gini = 0.0</tspan>
+      <tspan x="-7.4999962 -1.507996 4.484004 14.970004 22.474005 25.456003 31.448004 37.454002 41.192005 49.438004 53.190002" y="30.000011" id="tspan696">samples = 1</tspan>
+      <tspan x="-10.999996 -4.251996 1.7400039 4.7220039 11.470004 17.462004 21.214005 29.446005 33.198006 37.706005 44.454002 48.206005 51.958004 58.706005" y="45.000019" id="tspan698">value = [0, 1]</tspan>
+      <tspan x="-9.9999952 -3.2659955 -0.2699956 5.7080045 11.714005 17.706005 21.458004 29.690004 33.442005 37.950005 42.444004 48.436005 55.184006" y="60.000023" id="tspan700">class = fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1213.781,158.863c9.028,-9.285 18.481,-19.015 27.504,-28.297" id="path702"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1243.953,132.84l4.461,-9.61l-9.48,4.731l5.019,4.879z" id="path704"/>
+     <path fill="#e58139" fill-opacity="0.996078" fill-rule="nonzero" d="m1471,123l-118,0l0,-83l118,0l0,83z" id="path706"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1471,123l-118,0l0,-83l118,0l0,83z" id="path708"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,1385.5,107.80078) " id="text710">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan712">node #30</tspan>
+      <tspan x="-7 -0.252 2.744 9.4919996 12.474 16.226 24.458 28.209999 34.958 38.709999 45.458 52.220001" y="15.000006" id="tspan714">gini = 0.008</tspan>
+      <tspan x="-17.5 -11.508 -5.5159998 4.9699998 12.474 15.456 21.448 27.454 31.191999 39.438 43.189999 49.938 56.686001 63.433998" y="30.000011" id="tspan716">samples = 2405</tspan>
+      <tspan x="-24.5 -17.752001 -11.76 -8.7779999 -2.03 3.9619999 7.7140002 15.946 19.698 24.205999 30.954 37.702 44.450001 51.198002 54.950001 58.702 65.449997 72.197998" y="45.000019" id="tspan718">value = [2395, 10]</tspan>
+      <tspan x="-22.999998 -16.265999 -13.269998 -7.2919979 -1.285998 4.7060022 8.4580021 16.690002 20.442001 27.190002 34.694 41.442001 45.950001 50.444 54.952003 60.93 67.678001" y="60.000023" id="tspan720">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1412,158.863c0,-8.367 0,-17.093 0,-25.527" id="path722"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1415.5,133.23l-3.5,-10l-3.5,10l7,0z" id="path724"/>
+     <path fill="#e58139" fill-opacity="0.980392" fill-rule="nonzero" d="m1604.5,123l-115,0l0,-83l115,0l0,83z" id="path726"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1604.5,123l-115,0l0,-83l115,0l0,83z" id="path728"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,1520.5,107.80078) " id="text730">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan732">node #31</tspan>
+      <tspan x="-7 -0.252 2.744 9.4919996 12.474 16.226 24.458 28.209999 34.958 38.709999 45.458 52.220001" y="15.000006" id="tspan734">gini = 0.035</tspan>
+      <tspan x="-14.499996 -8.5079956 -2.515996 7.9700041 15.474004 18.456003 24.448004 30.454004 34.192005 42.438004 46.190002 52.938004 59.686005" y="30.000011" id="tspan736">samples = 223</tspan>
+      <tspan x="-17.5 -10.752 -4.7600002 -1.778 4.9699998 10.962 14.714 22.945999 26.698 31.205999 37.953999 44.702 51.450001 55.202 58.953999 65.702003" y="45.000019" id="tspan738">value = [219, 4]</tspan>
+      <tspan x="-22.999998 -16.265999 -13.269998 -7.2919979 -1.285998 4.7060022 8.4580021 16.690002 20.442001 27.190002 34.694 41.442001 45.950001 50.444 54.952003 60.93 67.678001" y="60.000023" id="tspan740">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1464.195,158.863c10.27,-9.468 21.035,-19.398 31.285,-28.851" id="path742"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1497.855,132.582l4.977,-9.352l-9.723,4.208l4.746,5.144z" id="path744"/>
+     <path fill="#e58139" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1658.5,249.5l-115,0l0,-83l115,0l0,83z" id="path746"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,1574.5,234.30078) " id="text748">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan750">node #33</tspan>
+      <tspan x="0 6.7480001 9.7440004 16.492001 19.474001 23.226 31.458 35.209999 41.958 45.709999" y="15.000006" id="tspan752">gini = 0.0</tspan>
+      <tspan x="-7.4999962 -1.507996 4.484004 14.970004 22.474005 25.456003 31.448004 37.454002 41.192005 49.438004 53.190002" y="30.000011" id="tspan754">samples = 9</tspan>
+      <tspan x="-10.999996 -4.251996 1.7400039 4.7220039 11.470004 17.462004 21.214005 29.446005 33.198006 37.706005 44.454002 48.206005 51.944004 58.706005" y="45.000019" id="tspan756">value = [9, 0]</tspan>
+      <tspan x="-22.999998 -16.265999 -13.269998 -7.2919979 -1.285998 4.7060022 8.4580021 16.690002 20.442001 27.190002 34.694 41.442001 45.950001 50.444 54.952003 60.93 67.678001" y="60.000023" id="tspan758">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1604.18,292.973c-0.407,-10.727 -0.836,-22.137 -1.25,-32.977" id="path760"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1606.422,259.676l-3.875,-9.86l-3.121,10.125l6.996,-0.265z" id="path762"/>
+     <path fill="#399de5" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1767.5,249.5l-91,0l0,-83l91,0l0,83z" id="path764"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,1695.5,234.30078) " id="text766">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan768">node #34</tspan>
+      <tspan x="0 6.7480001 9.7440004 16.492001 19.474001 23.226 31.458 35.209999 41.958 45.709999" y="15.000006" id="tspan770">gini = 0.0</tspan>
+      <tspan x="-7.4999962 -1.507996 4.484004 14.970004 22.474005 25.456003 31.448004 37.454002 41.192005 49.438004 53.190002" y="30.000011" id="tspan772">samples = 1</tspan>
+      <tspan x="-10.999996 -4.251996 1.7400039 4.7220039 11.470004 17.462004 21.214005 29.446005 33.198006 37.706005 44.454002 48.206005 51.958004 58.706005" y="45.000019" id="tspan774">value = [0, 1]</tspan>
+      <tspan x="-9.9999952 -3.2659955 -0.2699956 5.7080045 11.714005 17.706005 21.458004 29.690004 33.442005 37.950005 42.444004 48.436005 55.184006" y="60.000023" id="tspan776">class = fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1648.207,292.973c10.106,-11.5 20.902,-23.789 31.035,-35.317" id="path778"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1682.16,259.637l3.973,-9.821l-9.231,5.204l5.258,4.617z" id="path780"/>
+     <path fill="#e58139" fill-opacity="0.980392" fill-rule="nonzero" d="m2060,391l-134,0l0,-98l134,0l0,98z" id="path782"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m2060,391l-134,0l0,-98l134,0l0,98z" id="path784"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,1966.5,375.80078) " id="text786">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan788">node #36</tspan>
+      <tspan x="-32.500008 -25.766006 -19.774006 -15.280006 -7.7760062 -0.27200601 2.7099941 10.213994 13.965994 22.197994 30.443995 34.181995 40.943993 47.691994 54.439995 61.187992 67.935997 74.68399 78.435997" y="15.000006" id="tspan790">card_id &lt;= 270916.0</tspan>
+      <tspan x="-3.5 3.2479999 6.244 12.992 15.974 19.726 27.958 31.709999 38.458 42.209999 48.958" y="30.000011" id="tspan792">gini = 0.04</tspan>
+      <tspan x="-17.5 -11.508 -5.5159998 4.9699998 12.474 15.456 21.448 27.454 31.191999 39.438 43.189999 49.938 56.686001 63.433998" y="45.000019" id="tspan794">samples = 5734</tspan>
+      <tspan x="-28 -21.252001 -15.26 -12.278 -5.5300002 0.46200001 4.2140002 12.446 16.198 20.705999 27.454 34.202 40.950001 47.698002 51.450001 55.202 61.950001 68.697998 75.445999" y="60.000023" id="tspan796">value = [5618, 116]</tspan>
+      <tspan x="-22.999998 -16.265999 -13.269998 -7.2919979 -1.285998 4.7060022 8.4580021 16.690002 20.442001 27.190002 34.694 41.442001 45.950001 50.444 54.952003 60.93 67.678001" y="75.000031" id="tspan798">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1993,426.973c0,-8.282 0,-16.969 0,-25.489" id="path800"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1996.5,401.215l-3.5,-10l-3.5,10l7,0z" id="path802"/>
+     <path fill="#e58139" fill-opacity="0.666667" fill-rule="nonzero" d="m2328.5,391l-133,0l0,-98l133,0l0,98z" id="path804"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m2328.5,391l-133,0l0,-98l133,0l0,98z" id="path806"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,2235.5,375.80078) " id="text808">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan810">node #43</tspan>
+      <tspan x="-31.999996 -26.007996 -15.521996 -8.0179958 -1.269996 5.478004 9.2160044 12.968004 21.200005 29.432005 33.184006 39.932003 46.694004 53.442005 60.190002 66.938004 73.686005 77.438004" y="15.000006" id="tspan812">amount &lt;= 392000.0</tspan>
+      <tspan x="-7 -0.252 2.744 9.4919996 12.474 16.226 24.458 28.209999 34.958 38.709999 45.458 52.220001" y="30.000011" id="tspan814">gini = 0.375</tspan>
+      <tspan x="-10.999996 -5.0079961 0.98400402 11.470004 18.974005 21.956003 27.948004 33.954002 37.692005 45.938004 49.690002 56.438004" y="45.000019" id="tspan816">samples = 12</tspan>
+      <tspan x="-10.999996 -4.251996 1.7400039 4.7220039 11.470004 17.462004 21.214005 29.446005 33.198006 37.706005 44.454002 48.206005 51.958004 58.706005" y="60.000023" id="tspan818">value = [9, 3]</tspan>
+      <tspan x="-22.999998 -16.265999 -13.269998 -7.2919979 -1.285998 4.7060022 8.4580021 16.690002 20.442001 27.190002 34.694 41.442001 45.950001 50.444 54.952003 60.93 67.678001" y="75.000031" id="tspan820">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m2066.148,439.105c37.149,-18.23 82.243,-40.355 119.79,-58.781" id="path822"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m2187.879,383.27l7.434,-7.547l-10.52,1.265l3.086,6.282z" id="path824"/>
+     <path fill="#e58139" fill-opacity="0.980392" fill-rule="nonzero" d="m2012.5,257l-227,0l0,-98l227,0l0,98z" id="path826"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m2012.5,257l-227,0l0,-98l227,0l0,98z" id="path828"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,1872.5,241.80078) " id="text830">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan832">node #37</tspan>
+      <tspan x="-79 -72.265999 -67.757996 -61.779999 -55.787998 -52.049999 -49.053997 -41.563999 -34.815998 -27.311998 -21.319998 -17.581999 -11.589998 -4.099998 1.906002 5.644002 11.636002 22.122002 29.612001 33.364002 41.610001 49.842003 53.594002 60.342003 67.250008 73.998009 80.74601 87.494011 94.256004 101.00401 107.75201 114.50001 121.24801 125.00001" y="15.000006" id="tspan834">creationdate_stamp &lt;= 1446244608.0</tspan>
+      <tspan x="-6.9999862 -0.251986 2.744014 9.4920139 12.474014 16.226013 24.458014 28.210014 34.958015 38.710014 45.458015 52.220013" y="30.000011" id="tspan836">gini = 0.039</tspan>
+      <tspan x="-17.499987 -11.507986 -5.515986 4.9700141 12.474014 15.456014 21.448013 27.454014 31.192015 39.438015 43.190014 49.938015 56.686012 63.434013" y="45.000019" id="tspan838">samples = 5726</tspan>
+      <tspan x="-27.999987 -21.251986 -15.259986 -12.277986 -5.5299859 0.46201399 4.2140141 12.446014 16.198013 20.706015 27.454014 34.202015 40.950012 47.698013 51.450012 55.202015 61.950012 68.698013 75.446014" y="60.000023" id="tspan840">value = [5612, 114]</tspan>
+      <tspan x="-22.999985 -16.265984 -13.269984 -7.2919841 -1.285984 4.7060161 8.4580164 16.690016 20.442017 27.190016 34.694016 41.442017 45.950016 50.444016 54.952015 60.930016 67.678017" y="75.000031" id="tspan842">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1958.797,292.973c-6.348,-8.918 -13.035,-18.309 -19.547,-27.453" id="path844"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1941.984,263.328l-8.648,-6.113l2.949,10.176l5.699,-4.063z" id="path846"/>
+     <path fill="#e58139" fill-opacity="0.666667" fill-rule="nonzero" d="m2145.5,257l-115,0l0,-98l115,0l0,98z" id="path848"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m2145.5,257l-115,0l0,-98l115,0l0,98z" id="path850"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,2061.5,241.80078) " id="text852">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan854">node #40</tspan>
+      <tspan x="-22.000006 -19.018005 -11.514006 -4.010006 -1.028006 6.4759941 10.227994 18.459993 26.705994 30.443995 37.205994 43.953995 50.701996 57.449993 64.19799 67.949997" y="15.000006" id="tspan856">ip_id &lt;= 98147.0</tspan>
+      <tspan x="-7 -0.252 2.744 9.4919996 12.474 16.226 24.458 28.209999 34.958 38.709999 45.458 52.220001" y="30.000011" id="tspan858">gini = 0.375</tspan>
+      <tspan x="-7.5 -1.5080003 4.4839997 14.97 22.473999 25.455999 31.448 37.453999 41.192001 49.438 53.189999" y="45.000019" id="tspan860">samples = 8</tspan>
+      <tspan x="-11 -4.2520003 1.7399998 4.7219996 11.47 17.462 21.214001 29.445999 33.197998 37.706001 44.453999 48.206001 51.958 58.706001" y="60.000023" id="tspan862">value = [6, 2]</tspan>
+      <tspan x="-23.000002 -16.266003 -13.270002 -7.2920022 -1.2860022 4.7059979 8.4579983 16.689999 20.441998 27.189999 34.693996 41.441998 45.949997 50.443996 54.952 60.929996 67.678001" y="75.000031" id="tspan864">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m2027.566,292.973c6.418,-8.918 13.176,-18.309 19.758,-27.453" id="path866"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m2050.301,267.375l3,-10.16l-8.684,6.07l5.684,4.09z" id="path868"/>
+     <path fill="#e58139" fill-opacity="0.980392" fill-rule="nonzero" d="m1823.5,123l-125,0l0,-83l125,0l0,83z" id="path870"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1823.5,123l-125,0l0,-83l125,0l0,83z" id="path872"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,1734.5,107.80078) " id="text874">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan876">node #38</tspan>
+      <tspan x="-7 -0.252 2.744 9.4919996 12.474 16.226 24.458 28.209999 34.958 38.709999 45.458 52.220001" y="15.000006" id="tspan878">gini = 0.038</tspan>
+      <tspan x="-17.5 -11.508 -5.5159998 4.9699998 12.474 15.456 21.448 27.454 31.191999 39.438 43.189999 49.938 56.686001 63.433998" y="30.000011" id="tspan880">samples = 5716</tspan>
+      <tspan x="-28 -21.252001 -15.26 -12.278 -5.5300002 0.46200001 4.2140002 12.446 16.198 20.705999 27.454 34.202 40.950001 47.698002 51.450001 55.202 61.950001 68.697998 75.445999" y="45.000019" id="tspan882">value = [5604, 112]</tspan>
+      <tspan x="-22.999998 -16.265999 -13.269998 -7.2919979 -1.285998 4.7060022 8.4580021 16.690002 20.442001 27.190002 34.694 41.442001 45.950001 50.444 54.952003 60.93 67.678001" y="60.000023" id="tspan884">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1845.645,158.863c-10.497,-9.468 -21.504,-19.398 -31.981,-28.851" id="path886"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1815.918,127.332l-9.77,-4.102l5.079,9.297l4.691,-5.195z" id="path888"/>
+     <path fill="#e58139" fill-opacity="0.74902" fill-rule="nonzero" d="m1956.5,123l-115,0l0,-83l115,0l0,83z" id="path890"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1956.5,123l-115,0l0,-83l115,0l0,83z" id="path892"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,1872.5,107.80078) " id="text894">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan896">node #39</tspan>
+      <tspan x="-3.5 3.2479999 6.244 12.992 15.974 19.726 27.958 31.709999 38.458 42.209999 48.958" y="15.000006" id="tspan898">gini = 0.32</tspan>
+      <tspan x="-10.999996 -5.0079961 0.98400402 11.470004 18.974005 21.956003 27.948004 33.954002 37.692005 45.938004 49.690002 56.438004" y="30.000011" id="tspan900">samples = 10</tspan>
+      <tspan x="-10.999996 -4.251996 1.7400039 4.7220039 11.470004 17.462004 21.214005 29.446005 33.198006 37.706005 44.454002 48.206005 51.958004 58.706005" y="45.000019" id="tspan902">value = [8, 2]</tspan>
+      <tspan x="-22.999998 -16.265999 -13.269998 -7.2919979 -1.285998 4.7060022 8.4580021 16.690002 20.442001 27.190002 34.694 41.442001 45.950001 50.444 54.952003 60.93 67.678001" y="60.000023" id="tspan904">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1899,158.863c0,-8.367 0,-17.093 0,-25.527" id="path906"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m1902.5,133.23l-3.5,-10l-3.5,10l7,0z" id="path908"/>
+     <path fill="#e58139" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m2089.5,123l-115,0l0,-83l115,0l0,83z" id="path910"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,2005.5,107.80078) " id="text912">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan914">node #41</tspan>
+      <tspan x="0 6.7480001 9.7440004 16.492001 19.474001 23.226 31.458 35.209999 41.958 45.709999" y="15.000006" id="tspan916">gini = 0.0</tspan>
+      <tspan x="-7.4999962 -1.507996 4.484004 14.970004 22.474005 25.456003 31.448004 37.454002 41.192005 49.438004 53.190002" y="30.000011" id="tspan918">samples = 5</tspan>
+      <tspan x="-10.999996 -4.251996 1.7400039 4.7220039 11.470004 17.462004 21.214005 29.446005 33.198006 37.706005 44.454002 48.206005 51.958004 58.706005" y="45.000019" id="tspan920">value = [5, 0]</tspan>
+      <tspan x="-22.999998 -16.265999 -13.269998 -7.2919979 -1.285998 4.7060022 8.4580021 16.690002 20.442001 27.190002 34.694 41.442001 45.950001 50.444 54.952003 60.93 67.678001" y="60.000023" id="tspan922">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m2066.348,158.863c-3.887,-8.64 -7.946,-17.668 -11.856,-26.363" id="path924"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m2057.613,130.914l-7.293,-7.684l0.91,10.555l6.383,-2.871z" id="path926"/>
+     <path fill="#399de5" fill-opacity="0.498039" fill-rule="nonzero" d="m2198.5,123l-91,0l0,-83l91,0l0,83z" id="path928"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m2198.5,123l-91,0l0,-83l91,0l0,83z" id="path930"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,2126.5,107.80078) " id="text932">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan934">node #42</tspan>
+      <tspan x="-7 -0.252 2.744 9.4919996 12.474 16.226 24.458 28.209999 34.958 38.709999 45.458 52.220001" y="15.000006" id="tspan936">gini = 0.444</tspan>
+      <tspan x="-7.5 -1.5080003 4.4839997 14.97 22.473999 25.455999 31.448 37.453999 41.192001 49.438 53.189999" y="30.000011" id="tspan938">samples = 3</tspan>
+      <tspan x="-11 -4.2520003 1.7399998 4.7219996 11.47 17.462 21.214001 29.445999 33.197998 37.706001 44.453999 48.206001 51.958 58.706001" y="45.000019" id="tspan940">value = [1, 2]</tspan>
+      <tspan x="-10 -3.2659998 -0.2699998 5.7080002 11.714 17.705999 21.458 29.690001 33.442001 37.950001 42.444 48.436001 55.184002" y="60.000023" id="tspan942">class = fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m2113.129,158.863c4.562,-8.734 9.328,-17.859 13.91,-26.64" id="path944"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m2130.211,133.715l1.523,-10.485l-7.73,7.247l6.207,3.238z" id="path946"/>
+     <path fill="#e58139" fill-opacity="0.890196" fill-rule="nonzero" d="m2326,257l-128,0l0,-98l128,0l0,98z" id="path948"/>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m2326,257l-128,0l0,-98l128,0l0,98z" id="path950"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,2235.5,241.80078) " id="text952">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan954">node #44</tspan>
+      <tspan x="-29.500002 -22.766003 -16.774002 -12.280002 -4.7760019 2.727998 5.7099981 13.213998 16.965998 25.197998 33.443996 37.181999 43.943996 50.691998 57.439999 64.187996 70.935997 74.687996" y="15.000006" id="tspan956">card_id &lt;= 81892.5</tspan>
+      <tspan x="-3.5 3.2479999 6.244 12.992 15.974 19.726 27.958 31.709999 38.458 42.209999 48.958" y="30.000011" id="tspan958">gini = 0.18</tspan>
+      <tspan x="-10.999996 -5.0079961 0.98400402 11.470004 18.974005 21.956003 27.948004 33.954002 37.692005 45.938004 49.690002 56.438004" y="45.000019" id="tspan960">samples = 10</tspan>
+      <tspan x="-10.999996 -4.251996 1.7400039 4.7220039 11.470004 17.462004 21.214005 29.446005 33.198006 37.706005 44.454002 48.206005 51.958004 58.706005" y="60.000023" id="tspan962">value = [9, 1]</tspan>
+      <tspan x="-22.999998 -16.265999 -13.269998 -7.2919979 -1.285998 4.7060022 8.4580021 16.690002 20.442001 27.190002 34.694 41.442001 45.950001 50.444 54.952003 60.93 67.678001" y="75.000031" id="tspan964">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m2262,292.973c0,-8.282 0,-16.969 0,-25.489" id="path966"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m2265.5,267.215l-3.5,-10l-3.5,10l7,0z" id="path968"/>
+     <path fill="#399de5" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m2435.5,249.5l-91,0l0,-83l91,0l0,83z" id="path970"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,2363.5,234.30078) " id="text972">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan974">node #47</tspan>
+      <tspan x="0 6.7480001 9.7440004 16.492001 19.474001 23.226 31.458 35.209999 41.958 45.709999" y="15.000006" id="tspan976">gini = 0.0</tspan>
+      <tspan x="-7.4999962 -1.507996 4.484004 14.970004 22.474005 25.456003 31.448004 37.454002 41.192005 49.438004 53.190002" y="30.000011" id="tspan978">samples = 2</tspan>
+      <tspan x="-10.999996 -4.251996 1.7400039 4.7220039 11.470004 17.462004 21.214005 29.446005 33.198006 37.706005 44.454002 48.206005 51.958004 58.706005" y="45.000019" id="tspan980">value = [0, 2]</tspan>
+      <tspan x="-9.9999952 -3.2659955 -0.2699956 5.7080045 11.714005 17.706005 21.458004 29.690004 33.442005 37.950005 42.444004 48.436005 55.184006" y="60.000023" id="tspan982">class = fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m2308.574,292.973c11.258,-11.61 23.293,-24.024 34.567,-35.649" id="path984"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m2345.973,259.434l4.449,-9.618l-9.477,4.743l5.028,4.875z" id="path986"/>
+     <path fill="#399de5" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m2307.5,123l-91,0l0,-83l91,0l0,83z" id="path988"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,2235.5,107.80078) " id="text990">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan992">node #45</tspan>
+      <tspan x="0 6.7480001 9.7440004 16.492001 19.474001 23.226 31.458 35.209999 41.958 45.709999" y="15.000006" id="tspan994">gini = 0.0</tspan>
+      <tspan x="-7.4999962 -1.507996 4.484004 14.970004 22.474005 25.456003 31.448004 37.454002 41.192005 49.438004 53.190002" y="30.000011" id="tspan996">samples = 1</tspan>
+      <tspan x="-10.999996 -4.251996 1.7400039 4.7220039 11.470004 17.462004 21.214005 29.446005 33.198006 37.706005 44.454002 48.206005 51.958004 58.706005" y="45.000019" id="tspan998">value = [0, 1]</tspan>
+      <tspan x="-9.9999952 -3.2659955 -0.2699956 5.7080045 11.714005 17.706005 21.458004 29.690004 33.442005 37.950005 42.444004 48.436005 55.184006" y="60.000023" id="tspan1000">class = fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m2262,158.863c0,-8.367 0,-17.093 0,-25.527" id="path1002"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m2265.5,133.23l-3.5,-10l-3.5,10l7,0z" id="path1004"/>
+     <path fill="#e58139" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m2440.5,123l-115,0l0,-83l115,0l0,83z" id="path1006"/>
+     <text font-weight="normal" font-size="14px" font-family="TimesNewRoman" fill="#000000" fill-rule="nonzero" transform="matrix(1,0,0,-1,2356.5,107.80078) " id="text1008">
+      <tspan x="0 6.7480001 14.252 21.756001 27.733999 31.486 38.990002 45.737999" y="0" id="tspan1010">node #46</tspan>
+      <tspan x="0 6.7480001 9.7440004 16.492001 19.474001 23.226 31.458 35.209999 41.958 45.709999" y="15.000006" id="tspan1012">gini = 0.0</tspan>
+      <tspan x="-7.4999962 -1.507996 4.484004 14.970004 22.474005 25.456003 31.448004 37.454002 41.192005 49.438004 53.190002" y="30.000011" id="tspan1014">samples = 9</tspan>
+      <tspan x="-10.999996 -4.251996 1.7400039 4.7220039 11.470004 17.462004 21.214005 29.446005 33.198006 37.706005 44.454002 48.206005 51.958004 58.706005" y="45.000019" id="tspan1016">value = [9, 0]</tspan>
+      <tspan x="-22.999998 -16.265999 -13.269998 -7.2919979 -1.285998 4.7060022 8.4580021 16.690002 20.442001 27.190002 34.694 41.442001 45.950001 50.444 54.952003 60.93 67.678001" y="60.000023" id="tspan1018">class = non-fraud</tspan>
+     </text>
+     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m2308.781,158.863c9.028,-9.285 18.481,-19.015 27.504,-28.297" id="path1020"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="m2338.953,132.84l4.461,-9.61l-9.48,4.731l5.019,4.879z" id="path1022"/>
+    </g>
+   </g>
+   <g id="g1024"/>
+  </g>
+  <rect stroke="#002aff" id="svg_8" height="119.5" width="130.999999" y="888.750003" x="2087.750003" fill-opacity="0.02" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="#ffffff"/>
+  <line stroke="#002aff" marker-end="url(#se_marker_end_svg_15)" id="svg_15" y2="890.749999" x2="2101.249999" y1="842.25" x1="2059.75" fill-opacity="0.02" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="none"/>
+  <line stroke="#002aff" marker-end="url(#se_marker_end_svg_16)" id="svg_16" y2="716.250001" x2="1927.750001" y1="675.25" x1="1877.25" fill-opacity="0.02" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="none"/>
+  <line marker-end="url(#se_marker_end_svg_20)" id="svg_20" y2="541.75" x2="1801.75" y1="508.25" x1="1801.75" fill-opacity="0.02" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#002aff" fill="none"/>
+  <line marker-end="url(#se_marker_end_svg_21)" id="svg_21" y2="373.75" x2="1801.25" y1="340.75" x1="1801.25" fill-opacity="0.02" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#002aff" fill="none"/>
+  <line stroke="#002aff" marker-end="url(#se_marker_end_svg_22)" id="svg_22" y2="209.249999" x2="1733.250001" y1="172.75" x1="1699.25" fill-opacity="0.02" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="none"/>
+ </g>
+</svg>
